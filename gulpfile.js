@@ -41,8 +41,8 @@ var build_files = [
 gulp.task('wiredep', function () {
   gulp.src('sass/style.scss')
     .pipe(wiredep({
-      optional: 'configuration',
-      goes: 'here'
+      // optional: 'configuration',
+      // goes: 'here'
     }))
     .pipe(gulp.dest('sass/'));
 });

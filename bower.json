@@ -1,0 +1,24 @@
+{
+  "name": "bigo",
+  "description": "Description",
+  "main": "",
+  "authors": [
+    "Author"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dwyerb64/biggie",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  }
+}
