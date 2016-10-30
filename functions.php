@@ -98,6 +98,38 @@ function bigo_widgets_init() {
 }
 add_action( 'widgets_init', 'bigo_widgets_init' );
 
+add_action( 'init', 'create_post_type' );
+
+function create_post_type() {
+  register_post_type( 'work',
+    array(
+      'labels' => array(
+        'name' => __( 'Work' ),
+        'singular_name' => __( 'Work' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'work'),
+      'supports' => array('thumbnail','title', 'editor')
+    )
+  );
+}
+
+function remove_menus(){
+	// remove_menu_page( 'index.php' );                  //Dashboard
+	// remove_menu_page( 'edit.php' );                   //Posts
+	// remove_menu_page( 'upload.php' );                 //Media
+	// remove_menu_page( 'edit.php?post_type=page' );    //Pages
+	// remove_menu_page( 'edit-comments.php' );          //Comments
+	// remove_menu_page( 'themes.php' );                 //Appearance
+	// remove_menu_page( 'plugins.php' );                //Plugins
+	// remove_menu_page( 'users.php' );                  //Users
+	// remove_menu_page( 'tools.php' );                  //Tools
+	// remove_menu_page( 'options-general.php' );        //Settings
+	//
+}
+add_action( 'admin_menu', 'remove_menus' );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -111,6 +143,8 @@ function bigo_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'bigo-main', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );	
 }
 add_action( 'wp_enqueue_scripts', 'bigo_scripts' );
 
@@ -141,4 +175,38 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
-include_once('plugins/advanced-custom-fields/acf.php');
+// // 1. customize ACF path
+// add_filter('acf/settings/path', 'my_acf_settings_path');
+ 
+// function my_acf_settings_path( $path ) {
+ 
+//     // update path
+//     $path = get_stylesheet_directory() . '/plugins/advanced-custom-fields/';
+    
+//     // return
+//     return $path;
+    
+// }
+ 
+
+// // 2. customize ACF dir
+// add_filter('acf/settings/dir', 'my_acf_settings_dir');
+ 
+// function my_acf_settings_dir( $dir ) {
+ 
+//     // update path
+//     $dir = get_stylesheet_directory_uri() . '/plugins/advanced-custom-fields/';
+    
+//     // return
+//     return $dir;
+    
+// }
+ 
+
+// // 3. Hide ACF field group menu item
+// // add_filter('acf/settings/show_admin', '__return_false');
+
+
+// // 4. Include ACF
+// include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields/acf.php' );
+
