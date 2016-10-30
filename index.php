@@ -44,7 +44,7 @@ get_header(); ?>
     ?>
 			            
       <h2><?php the_title() ?></h2>
-      <!-- <h4><?php the_field('teaser_text') ?></h4> -->
+      <h4><?php the_field('client') ?></h4>
 			
 	  <?php
 	      endwhile;

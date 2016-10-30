@@ -210,3 +210,4 @@ require get_template_directory() . '/inc/jetpack.php';
 // // 4. Include ACF
 // include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields/acf.php' );
 
+require_once(get_stylesheet_directory() . '/plugins/advanced-custom-fields/custom-fields-data.php');
