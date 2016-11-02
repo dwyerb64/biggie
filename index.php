@@ -44,8 +44,8 @@ get_header(); ?>
     ?>
 			            
       <h2><?php the_title() ?></h2>
-      <!-- <h4><?php the_field('teaser_text') ?></h4> -->
-			
+      <h4><?php the_field('client') ?></h4>
+			<?php the_post_thumbnail( 'medium_large', array( 'class' => 'work-item work-item-enter' ) ) ?>
 	  <?php
 	      endwhile;
 	      wp_reset_postdata();

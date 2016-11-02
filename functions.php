@@ -117,7 +117,7 @@ function create_post_type() {
 
 function remove_menus(){
 	// remove_menu_page( 'index.php' );                  //Dashboard
-	// remove_menu_page( 'edit.php' );                   //Posts
+	remove_menu_page( 'edit.php' );                   //Posts
 	// remove_menu_page( 'upload.php' );                 //Media
 	// remove_menu_page( 'edit.php?post_type=page' );    //Pages
 	// remove_menu_page( 'edit-comments.php' );          //Comments
@@ -137,6 +137,10 @@ function bigo_scripts() {
 	wp_enqueue_style( 'bigo-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'bigo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/bower_components/waypoints/lib/jquery.waypoints.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bigo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -210,3 +214,4 @@ require get_template_directory() . '/inc/jetpack.php';
 // // 4. Include ACF
 // include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields/acf.php' );
 
+require_once(get_stylesheet_directory() . '/plugins/advanced-custom-fields/custom-fields-data.php');
