@@ -98,7 +98,7 @@ function bigo_widgets_init() {
 }
 add_action( 'widgets_init', 'bigo_widgets_init' );
 
-add_action( 'init', 'create_post_type' );
+// add_action( 'init', 'create_post_type' );
 
 function create_post_type() {
   register_post_type( 'work',
@@ -110,14 +110,20 @@ function create_post_type() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'work'),
-      'supports' => array('thumbnail','title', 'editor')
+      'supports' => array('thumbnail','title')
     )
   );
 }
+add_action( 'init', 'config_post_type' );
+
+function config_post_type(){
+	remove_post_type_support( 'post', 'editor' );
+}
+
 
 function remove_menus(){
 	// remove_menu_page( 'index.php' );                  //Dashboard
-	remove_menu_page( 'edit.php' );                   //Posts
+	// remove_menu_page( 'edit.php' );                   //Posts
 	// remove_menu_page( 'upload.php' );                 //Media
 	// remove_menu_page( 'edit.php?post_type=page' );    //Pages
 	// remove_menu_page( 'edit-comments.php' );          //Comments
@@ -215,3 +221,4 @@ require get_template_directory() . '/inc/jetpack.php';
 // include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields/acf.php' );
 
 require_once(get_stylesheet_directory() . '/plugins/advanced-custom-fields/custom-fields-data.php');
+require get_template_directory() .'/plugins/acf-repeater/acf-repeater.php';

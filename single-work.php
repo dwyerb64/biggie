@@ -7,10 +7,10 @@
  * @package bigo
  */
 
+
 get_header(); ?>
 
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+
 
     <?php
     while ( have_posts() ) : the_post();
@@ -27,8 +27,15 @@ get_header(); ?>
     endwhile; // End of the loop.
     ?>
 
-    </main><!-- #main -->
-  </div><!-- #primary -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="http://placehold.it/350x150" alt="">
+    </div>
+  </div>
+</div>
+
+
 
 <?php
 get_footer();
