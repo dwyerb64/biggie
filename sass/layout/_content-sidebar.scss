@@ -18,3 +18,15 @@
 	clear: both;
 	width: $size__site-main;
 }
+
+#main-wrapper {
+	@include outer-container;
+	background-color: blue;
+}
+
+.left-panel {
+	@include span-columns(6);
+	height: 200px;
+	background-color: yellow;
+}
+	

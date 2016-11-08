@@ -15,6 +15,12 @@
 get_header(); ?>
 
 
+<section id="container">
+	<div class="row">
+		<div class="col-xs-6">Test</div>
+		<div class="col-xs-6">Test </div>
+	</div>
+</section>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
