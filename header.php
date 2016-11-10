@@ -20,5 +20,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
+<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>	
 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

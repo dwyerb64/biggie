@@ -1,3 +1,5 @@
+
+
 .page-template-page_work {
 	h1 {
 		font-size: 160px;
@@ -5,3 +7,19 @@
 		text-transform: lowercase;
 	}
 }
+
+.menu 	{
+	li {
+		font-weight: bold;
+		font-size: 20px;
+		a {
+			color: gray;
+			&:hover {
+				text-decoration: none;
+				cursor: hand;
+				color: black;
+			}
+		}
+	}
+}
+

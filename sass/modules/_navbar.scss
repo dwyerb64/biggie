@@ -1,0 +1,27 @@
+.menu {
+	position: fixed;
+    right: 30px;
+    transform: rotate(-90deg);
+    transform-origin: top right; 
+    width: 90vh;
+	list-style-type: none;
+	margin-right: 40px;
+
+	> li {
+		display: inline-block;
+		margin-right: 10vh;
+		margin-left: 10vh;
+		position: relative;
+		
+
+		@include strikethrough-onhover();
+	}
+
+	&#social-menu {
+		left: 30px;
+		transform-origin: top left; 
+		bottom: 20px;
+
+	}
+    
+}
