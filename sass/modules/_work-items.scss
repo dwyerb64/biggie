@@ -1,10 +1,26 @@
-
 .work-item {
+    padding: 30px;
     -webkit-transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
     -moz-transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
     -o-transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
     -ms-transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
     transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
+
+    img {
+        width: 100%;
+    }
+}
+
+.work-item:nth-child(odd) {
+        margin-top: -50px;
+}
+
+.work-item:nth-of-type(2) {
+    img {
+        margin-left: -100px;
+        width: 120%;
+        height: 120%;
+    }
 }
 
 @media only screen and (min-width: 480px) {

@@ -1,15 +1,20 @@
 <?php
 /* Template name: Work Page */
-
 get_header(); ?>
 
 
-
+<main class="container">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <div class="work-title">
+            <h1><?php echo get_the_title() ?></h1>
+          </div>
+        </div>
 
     <?php
 
       
-      $type = 'work';
+      $type = 'post';
       $queryArgs=array(
         'post_type' => $type,
         'post_status' => 'publish',
@@ -29,17 +34,22 @@ get_header(); ?>
       $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
       $thumb_url = $thumb_url_array[0];
     ?>
-      
-      <h2><?php the_title() ?></h2>
-      <h4><?php the_field('client') ?></h4>
-      <?php the_post_thumbnail( 'medium_large', array( 'class' => 'work-item work-item-enter' ) ) ?>
-      
+
+      <div class="col-xs-12 col-sm-6 work-item work-item-enter">
+        
+        <?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+        <h2><?php the_field('client') ?></h2>
+        <h3><?php the_field('client') ?></h3>
+      </div>
     <?php
         endwhile;
         wp_reset_postdata();
       }
   
     ?>
+
+    </div><!-- #primary -->
+  </main><!-- #main -->
 
 
 <?php
