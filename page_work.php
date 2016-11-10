@@ -38,7 +38,7 @@ get_header(); ?>
       <div class="col-xs-12 col-sm-6 work-item work-item-enter">
         
         <?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
-        <h2><?php the_field('client') ?></h2>
+        <h2><?php the_title( ) ?></h2>
         <h3><?php the_field('client') ?></h3>
       </div>
     <?php
