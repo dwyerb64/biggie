@@ -20,5 +20,6 @@
 </head>
 
 <body <?php body_class(); ?>>
+<img class="header-logo" src="<?php echo get_header_image(); ?>">
 <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>	
 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

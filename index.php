@@ -12,56 +12,68 @@
  * @package bigo
  */
 
-get_header(); ?>
+get_header(); 
+
+$tagline = get_bloginfo('description');
+?>
 
 
-<section id="container">
+
+<div id="slogan-container">
+	<h1 class="slogan-title"><?php echo $tagline; ?></h1>
+</div>
+
+<main class="container">
 	<div class="row">
-		<div class="col-xs-6">Test</div>
-		<div class="col-xs-6">Test </div>
-	</div>
-</section>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+		<div class="col-xs-12 home-item" title="<?php echo $tagline; ?>">
+			<div class="company-description">
+				<p>
+					<?php echo get_theme_mod( 'company_description' ); ?>
+				</p>
+			</div>
+		</div>
+	</div><!-- #primary -->
 		<?php
 
 			
-			$type = 'work';
+			$type = 'post';
 			$queryArgs=array(
-			  'post_type' => $type,
-			  'post_status' => 'publish',
-			  'post__not_in' => array(get_the_ID()),
-			  'posts_per_page' => 3);
+				'post_type' => $type,
+				'post_status' => 'publish',
+				'post__not_in' => array(get_the_ID()),
+				'posts_per_page' => 5);
 			$workQuery = null;
 			$workQuery = new WP_Query($queryArgs);
 			
 			if( $workQuery->have_posts() ) {
-			      while ($workQuery->have_posts()) : $workQuery->the_post();
+						while ($workQuery->have_posts()) : $workQuery->the_post();
 			
-	  ?>
+		?>
 			
-			        
-    <?php
-      $thumb_id = get_post_thumbnail_id();
-      $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
-      $thumb_url = $thumb_url_array[0];
-    ?>
-			            
-      <h2><?php the_title() ?></h2>
-      <h4><?php the_field('client') ?></h4>
-			<?php the_post_thumbnail( 'medium_large', array( 'class' => 'work-item work-item-enter' ) ) ?>
-	  <?php
-	      endwhile;
-	      wp_reset_postdata();
-	    }
+							
+		<?php
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
+			$thumb_url = $thumb_url_array[0];
+		?>
+
+			<div class="col-xs-12 home-item" title="<?php the_title( ) ?>">
+				
+				<?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+				<h2><?php the_field('client') ?></h2>
+				<h3><?php the_field('client') ?></h3>
+			</div>
+		<?php
+				endwhile;
+				wp_reset_postdata();
+			}
 	
-	  ?>
+		?>
+
+	
+</main><!-- #main -->
 
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 
