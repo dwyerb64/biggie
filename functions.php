@@ -121,6 +121,23 @@ function config_post_type(){
 	remove_post_type_support( 'post', 'editor' );
 }
 
+/**
+* Create Logo Setting and Upload Control
+*/
+function your_theme_new_customizer_settings($wp_customize) {
+// add a setting for the site logo
+$wp_customize->add_setting('company_description');
+// Add a control to upload the logo
+$wp_customize->add_control( 'company_description',
+array(
+'label' => 'Company Description',
+'section' => 'title_tagline',
+'settings' => 'company_description',
+'type' => 'textarea'
+)  );
+}
+add_action('customize_register', 'your_theme_new_customizer_settings');
+
 
 function remove_menus(){
 	// remove_menu_page( 'index.php' );                  //Dashboard
