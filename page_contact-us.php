@@ -1,18 +1,18 @@
 <?php
-/* Template name: Contact Us Page */
+/* Template name: Contact Us */
 
 get_header(); ?>
 
-<section id="contact-us">
-	<div class="title-block">
-		<p><?php the_field('contact_details_title'); ?></p>
-	</div>
-	<div class="content-block">
-		<p><?php the_field('contact_details_content'); ?></p>
-	</div>
+<section id="contact-us" class="container" >
+	<div class="row">
+		<div class="title-block col-md-6" >
+			<h1><?php the_field('contact_details_title'); ?></h1>
+		</div>
+		<div class="content-block col-md-6">
+			<p><?php the_field('contact_details_content'); ?></p>
+		</div>
+	</div>	
 </section>
-
-<div class="test">test</div>
 
 <?php get_header(); ?>
 
