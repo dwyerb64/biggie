@@ -1,0 +1,22 @@
+.page-contact-us{
+	background-color: $color__background-contact-about;
+}
+
+#contact-us{
+	padding: 23vh;
+}
+
+.title-block h1{
+	font-size: 80px;
+	color: $color__text-title-contact-about;
+}
+
+@media only screen and (max-width: 500px) {
+	#contact-us{
+	padding: 5vh 10vw;
+	}
+	.title-block h1{
+		font-size: 60px;
+	}
+
+}
