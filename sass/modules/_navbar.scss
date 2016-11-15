@@ -1,18 +1,21 @@
 .menu {
+	z-index: 1000;
 	position: fixed;
-    right: 30px;
-    transform: rotate(-90deg);
-    transform-origin: top right; 
-    width: 90vh;
+  right: 30px;
+  transform: rotate(-90deg);
+  transform-origin: top right; 
+  width: 100%;
+  width: 100vh;
 	list-style-type: none;
 	margin-right: 40px;
 
 	> li {
 		display: inline-block;
-		margin-right: 10vh;
-		margin-left: 10vh;
+		margin-right: 7vh;
+		margin-left: 7vh;
 		position: relative;
-		
+		cursor: pointer;
+		float: right;
 
 		@include strikethrough-onhover();
 	}
@@ -21,7 +24,9 @@
 		left: 30px;
 		transform-origin: top left; 
 		bottom: 20px;
-
+		> li {
+		float: left;
+		}
 	}
     
 }

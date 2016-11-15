@@ -1,4 +1,4 @@
-.page-contact-us{
+.page-template-page_contact-us, .page-template-page_about-us {
 	background-color: $color__background-contact-about;
 }
 
@@ -13,7 +13,7 @@
 
 @media only screen and (max-width: 500px) {
 	#contact-us{
-	padding: 5vh 10vw;
+		padding: 5vh 10vw;
 	}
 	.title-block h1{
 		font-size: 60px;
