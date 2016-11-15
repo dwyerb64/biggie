@@ -36,7 +36,7 @@ $tagline = get_bloginfo('description');
 		<?php
 
 			
-			$type = 'work';
+			$type = 'portfolio';
 			$queryArgs=array(
 				'post_type' => $type,
 				'post_status' => 'publish',
