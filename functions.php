@@ -113,15 +113,15 @@ add_action( 'widgets_init', 'bigo_widgets_init' );
 add_action( 'init', 'create_post_type' );
 
 function create_post_type() {
-  register_post_type( 'work',
+  register_post_type( 'portfolio',
     array(
       'labels' => array(
-        'name' => __( 'Work' ),
-        'singular_name' => __( 'Work' )
+        'name' => __( 'Portfolio' ),
+        'singular_name' => __( 'Work Item' )
       ),
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'work'),
+      'rewrite' => array('slug' => 'portfolio'),
       'supports' => array('thumbnail','title')
     )
   );
