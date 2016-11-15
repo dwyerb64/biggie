@@ -1,0 +1,14 @@
+@mixin align-fixed-element-with-responsive-container{ 
+
+  position: fixed;
+  left: 50%;
+  @media (min-width: 1200px){
+    margin-left: -1170px * 0.5;
+  }
+  @media (min-width: 992px){
+    margin-left: -970px * 0.5;
+  }
+  @media (min-width: 768px){
+    margin-left: -750px * 0.5;
+  }
+}

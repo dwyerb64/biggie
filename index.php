@@ -19,7 +19,7 @@ $tagline = get_bloginfo('description');
 
 
 
-<div id="slogan-container">
+<div class="container" id="slogan-container">
 	<h1 class="slogan-title"><?php echo $tagline; ?></h1>
 </div>
 

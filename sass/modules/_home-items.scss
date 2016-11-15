@@ -5,14 +5,15 @@
 
   .company-description {
     position: absolute;
-    left: 0;
+    left: 0px;
     bottom: 40px;
+    padding: 15px;
     color: blue;
     font-size: 20px;
     width: 100%;
-
+    color: $colorPrimary1;
     @media only screen and (min-width: 768px){
-      width: 60%;
+      width: 55%;
     }
   }
 }
