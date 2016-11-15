@@ -110,7 +110,7 @@ function bigo_widgets_init() {
 }
 add_action( 'widgets_init', 'bigo_widgets_init' );
 
-// add_action( 'init', 'create_post_type' );
+add_action( 'init', 'create_post_type' );
 
 function create_post_type() {
   register_post_type( 'work',
@@ -126,11 +126,11 @@ function create_post_type() {
     )
   );
 }
-add_action( 'init', 'config_post_type' );
+// add_action( 'init', 'config_post_type' );
 
-function config_post_type(){
-	remove_post_type_support( 'post', 'editor' );
-}
+// function config_post_type(){
+// 	remove_post_type_support( 'post', 'editor' );
+// }
 
 /**
 * Create Logo Setting and Upload Control
@@ -152,7 +152,7 @@ add_action('customize_register', 'your_theme_new_customizer_settings');
 
 function remove_menus(){
 	// remove_menu_page( 'index.php' );                  //Dashboard
-	// remove_menu_page( 'edit.php' );                   //Posts
+	remove_menu_page( 'edit.php' );                   //Posts
 	// remove_menu_page( 'upload.php' );                 //Media
 	// remove_menu_page( 'edit.php?post_type=page' );    //Pages
 	// remove_menu_page( 'edit-comments.php' );          //Comments

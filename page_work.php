@@ -14,12 +14,12 @@ get_header(); ?>
     <?php
 
       
-      $type = 'post';
+      $type = 'work';
       $queryArgs=array(
         'post_type' => $type,
         'post_status' => 'publish',
         'post__not_in' => array(get_the_ID()),
-        'posts_per_page' => 3);
+        'posts_per_page' => 10);
       $workQuery = null;
       $workQuery = new WP_Query($queryArgs);
       
