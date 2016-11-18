@@ -35,8 +35,15 @@
 	z-index: 1000;
 	cursor: pointer;
   position: absolute;
-  left: 60px;
-  top: 40px;
+  left: 18px;
+  top: 18px;
   max-width: 200px;
 }
 
+
+@media (min-width: 768px) {
+		.header-logo{
+		left: 60px;
+		top: 40px;
+	}
+}

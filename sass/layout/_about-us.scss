@@ -1,0 +1,40 @@
+.page-template-page_about-us{
+	background-color: $colorPrimary1;
+	
+	h1{
+		color: $colorWhitish;
+		font-size: 45px;
+		padding-top: 8px;
+	}
+
+	.title-block{
+		padding-bottom: 18px;
+	}
+
+
+
+	@media (min-width: 768px) {
+		#about-us{
+			width: 768px;
+			padding-top: 40vh;
+		}
+
+
+		.content-block{
+			position: relative;
+			height: 205px;
+			
+			p{
+				position: absolute;
+    			bottom: 0;
+			}
+		}
+
+		h1{
+			padding-left: 50px;
+			font-size: 80px;
+		}		
+	}
+
+
+}
