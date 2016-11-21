@@ -177,6 +177,8 @@ function bigo_scripts() {
 
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/ac71f154fc.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/bower_components/waypoints/lib/jquery.waypoints.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bigo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

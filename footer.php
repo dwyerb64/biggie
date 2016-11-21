@@ -11,26 +11,46 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class=" container site-footer" role="contentinfo">
-		<div class="row site-info">
-			<div class="col-md-6">
-				<p>
-					big O <br>									
-					9 Mount Street Crescent <br>
-					Dublin 2 <br>
-					Ireland<br>
-					tel. +353 (1) 531 255<br>
-					email: hi@bigo.ie<br>
-
-				</p>
-			</div>
-			<div class="col-md-6">
-				<!-- ICONS --><i class="fa fa-camera-retro"></i>
-			</div>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+</div><!-- #content -->
+	<section id="footer-container">
+		<footer id="colophon" class=" container site-footer" role="contentinfo">
+			<div class="row site-info">
+				<div class="col-xs-6 footer-content">
+					<p>
+						big O <br>									
+						9 Mount Street Crescent <br>
+						Dublin 2 <br>
+						Ireland<br>
+						tel. +353 (1) 531 255<br>
+						email: hi@bigo.ie<br>
+	
+					</p>
+				</div>
+				<div class="col-xs-6 social-icons-container">
+					<ul class="social-icons">
+						<li class="fa-stack fa-2x">
+							<a href="#">
+								<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+								<i class="fa fa-vimeo fa-stack-1x"></i>
+							</a>
+						</li>
+						<li class="fa-stack fa-2x">
+							<a href="#">
+								<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+								<i class="fa fa-youtube fa-stack-1x"></i>
+							</a>
+						</li>
+						<li class="fa-stack fa-2x">
+							<a href="#">
+								<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+								<i class="fa fa-twitter fa-stack-1x"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</section>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
