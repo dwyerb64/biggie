@@ -31,8 +31,8 @@ get_header(); ?>
 				<div class="col-md-6">
 					<h2><?php the_field('work_unit_title'); ?></h2>
 					<figure>
-						<img src="<?php echo $work_unit_image['url']; ?>" alt="<?php echo $work_unit_image['alt']; ?>" />
-						<figcaption><?php the_field('work_unit_image_caption'); ?></figcaption>
+							<img src="<?php echo $work_unit_image['url']; ?>" alt="<?php echo $work_unit_image['alt']; ?>" />
+							<figcaption><?php the_field('work_unit_image_caption'); ?></figcaption>
 					<figure>
 				</div>
 				<div class="col-md-6">
@@ -43,9 +43,39 @@ get_header(); ?>
 
     <?php endwhile; // End of the loop. ?>
 
+<div class="container">
 
+		<?php
 
+      
+      $type = 'portfolio';
+      $queryArgs=array(
+        'post_type' => $type,
+        'post_status' => 'publish',
+        'post__not_in' => array(get_the_ID()),
+        'posts_per_page' => 3);
+      $workQuery = null;
+      $workQuery = new WP_Query($queryArgs);
+      
+      if( $workQuery->have_posts() ) {
+            while ($workQuery->have_posts()) : $workQuery->the_post();
+      
+    ?>
 
+    
+
+    <div class="row">
+    	<div class="xs-col-12">
+    		<?php the_title() ?>
+    	</div>
+    </div>
+
+ 		<?php
+				endwhile;
+				wp_reset_postdata();
+			}
+		?>
+		</div>
 
 <?php
 get_footer();
