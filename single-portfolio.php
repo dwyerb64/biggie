@@ -25,21 +25,59 @@ get_header(); ?>
 		the_content();
 		?>
 		</section>
+    
+    <section class="container">
+    <?php
 
-		<section class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<h2><?php the_field('work_unit_title'); ?></h2>
-					<figure>
-							<img src="<?php echo $work_unit_image['url']; ?>" alt="<?php echo $work_unit_image['alt']; ?>" />
-							<figcaption><?php the_field('work_unit_image_caption'); ?></figcaption>
-					<figure>
-				</div>
-				<div class="col-md-6">
-					<p><?php the_field('work_unit_text_area'); ?></p>
-				</div>
-			</div>
-		</section>
+      // check if the flexible content field has rows of data
+      if( have_rows('work_content') ):
+
+           // loop through the rows of data
+          while ( have_rows('work_content') ) : the_row();
+
+              if( get_row_layout() == 'body_content' ):
+                ?>
+              
+              <div class="row">
+                <div class="col-xs-12 col-sm-7 col-sm-offset-5">
+                  <?php  the_sub_field('body_content');  ?>
+                </div>
+              </div>
+              
+              <?php
+
+              elseif( get_row_layout() == 'image' ): 
+
+                $images = get_sub_field('images');
+                
+                $imageCount = count($images);
+                switch ($imageCount) {
+                    case 1:
+                        
+                        break;
+                    case 2:
+                        include('template-parts/partial-images-2.php');
+                        break;
+                    case 3:
+                        include('template-parts/partial-images-3.php');
+                        break;
+                    default:
+                        // nothing yet;
+                }
+
+              endif;
+
+          endwhile;
+
+      else :
+
+          // no layouts found
+
+      endif;
+
+    ?>
+    </section>
+
 
     <?php endwhile; // End of the loop. ?>
 
@@ -66,9 +104,13 @@ get_header(); ?>
 
     <div class="row">
     	<div class="xs-col-12">
-    		<?php the_title() ?>
+        <h1>
+    		  <?php the_title() ?>
+        </h1>
     	</div>
     </div>
+
+    
 
  		<?php
 				endwhile;
