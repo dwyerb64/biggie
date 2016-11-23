@@ -1,17 +1,13 @@
 <div class="row">
                       
     <?php 
-
-      $count = 1;
-
       foreach( $images as $image ): 
     ?>
         
-        <div class="col-xs-12" style="background-size: cover; height: 600px; background: url(<?php echo $image['sizes']['medium']; ?>) no-repeat center center">
+        <div class="col-xs-12 portfolio-image" style="background-size: cover; background-repeat: no-repeat; height: 600px; background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
         </div> 
 
     <?php 
-    $count = $count + 1;
     endforeach; ?>
 
 </div>

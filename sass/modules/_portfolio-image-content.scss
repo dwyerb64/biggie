@@ -1,0 +1,15 @@
+.portfolio-image {
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  height: 600px; 
+
+  &.right {
+    height: 600px; 
+    // margin-left: $body-padding / 2;
+    float: right; 
+  }
+  &.left {
+    height: 300px; 
+    // margin-right: $body-padding / 2;
+  }
+}

@@ -1,0 +1,12 @@
+.portfolio-footer-links {
+  background-color: $colorTertiary1;
+  a {
+    color: white;  
+    &:hover{
+      color: $colorPrimary1;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  
+}

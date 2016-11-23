@@ -253,8 +253,8 @@ function my_acf_settings_dir( $dir ) {
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf.php' );
 
-// require_once(get_stylesheet_directory() . '/plugins/advanced-custom-fields/custom-fields-data.php');
-// require get_template_directory() .'/plugins/acf-repeater/acf-repeater.php';
+include_once( get_stylesheet_directory() . '/template-parts/query-portfolio.php' );
+
 
 
 

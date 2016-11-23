@@ -8,19 +8,19 @@
         switch ($count) {
             case 1:
                 ?>
-                <div class="col-xs-6" style="background-size: cover; background-repeat: no-repeat; height: 300px; background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
+                <div class="col-xs-6 portfolio-image left" style="background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
                 </div> 
                 <?php
                 break;
             case 2:
                 ?>
-                <div class="col-xs-6" style="float: right; background-size: cover; background-repeat: no-repeat; height: 600px; background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
+                <div class="col-xs-6 portfolio-image right" style="background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
                 </div> 
                 <?php
                 break;
             case 3:
                 ?>
-                <div class="col-xs-6" style="background-size: cover; background-repeat: no-repeat; height: 300px; background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
+                <div class="col-xs-6 portfolio-image left" style="background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
                 </div> 
                 <?php
                 break;

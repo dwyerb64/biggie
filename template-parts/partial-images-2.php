@@ -4,7 +4,7 @@
 
       foreach( $images as $image ): 
         ?>
-                <div class="col-xs-6" style="background-size: cover; background-repeat: no-repeat; height: 600px; background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
+                <div class="col-xs-6 portfolio-image" style="background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
                 </div> 
                 
 

@@ -17,17 +17,11 @@ get_header(); ?>
 		$work_unit_image = get_field('work_unit_image');
 		 ?>
 
-		<section id="featured-image" class="container">
+		<section id="featured-image" class="container layout-portfolio">
 		<?php
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail('full', array( 'class' => 'img-responsive' ));
 		} 
-		the_content();
-		?>
-		</section>
-    
-    <section class="container">
-    <?php
 
       // check if the flexible content field has rows of data
       if( have_rows('work_content') ):
@@ -38,7 +32,7 @@ get_header(); ?>
               if( get_row_layout() == 'body_content' ):
                 ?>
               
-              <div class="row">
+              <div class="row portfolio-body-content">
                 <div class="col-xs-12 col-sm-7 col-sm-offset-5">
                   <?php  the_sub_field('body_content');  ?>
                 </div>
@@ -53,7 +47,7 @@ get_header(); ?>
                 $imageCount = count($images);
                 switch ($imageCount) {
                     case 1:
-                        
+                        include('template-parts/partial-images-1.php');
                         break;
                     case 2:
                         include('template-parts/partial-images-2.php');
@@ -79,45 +73,8 @@ get_header(); ?>
     </section>
 
 
-    <?php endwhile; // End of the loop. ?>
+    <?php endwhile; // End of the loop. 
 
-<div class="container">
+include('template-parts/partial-portfolio-footer-links.php');
 
-		<?php
-
-      
-      $type = 'portfolio';
-      $queryArgs=array(
-        'post_type' => $type,
-        'post_status' => 'publish',
-        'post__not_in' => array(get_the_ID()),
-        'posts_per_page' => 3);
-      $workQuery = null;
-      $workQuery = new WP_Query($queryArgs);
-      
-      if( $workQuery->have_posts() ) {
-            while ($workQuery->have_posts()) : $workQuery->the_post();
-      
-    ?>
-
-    
-
-    <div class="row">
-    	<div class="xs-col-12">
-        <h1>
-    		  <?php the_title() ?>
-        </h1>
-    	</div>
-    </div>
-
-    
-
- 		<?php
-				endwhile;
-				wp_reset_postdata();
-			}
-		?>
-		</div>
-
-<?php
 get_footer();

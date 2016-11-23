@@ -36,14 +36,7 @@ $tagline = get_bloginfo('description');
 		<?php
 
 			
-			$type = 'portfolio';
-			$queryArgs=array(
-				'post_type' => $type,
-				'post_status' => 'publish',
-				'post__not_in' => array(get_the_ID()),
-				'posts_per_page' => 10);
-			$workQuery = null;
-			$workQuery = new WP_Query($queryArgs);
+			$workQuery = getListOfPortfolios(10);
 			
 			if( $workQuery->have_posts() ) {
 						while ($workQuery->have_posts()) : $workQuery->the_post();
