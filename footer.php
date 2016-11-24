@@ -16,15 +16,7 @@
 		<footer id="colophon" class=" container site-footer" role="contentinfo">
 			<div class="row site-info">
 				<div class="col-xs-6 footer-content">
-					<p>
-						big O <br>									
-						9 Mount Street Crescent <br>
-						Dublin 2 <br>
-						Ireland<br>
-						tel. +353 (1) 531 255<br>
-						email: hi@bigo.ie<br>
-	
-					</p>
+					<p><?php the_field('footer_body', 'option'); ?></p>
 				</div>
 				<div class="col-xs-6 social-icons-container">
 					<ul class="social-icons">
