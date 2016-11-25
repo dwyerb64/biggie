@@ -17,11 +17,8 @@ get_header(); ?>
 		$work_unit_image = get_field('work_unit_image');
 		 ?>
 
-		<section id="featured-image" class="container layout-portfolio">
+		<section class="container layout-portfolio">
 		<?php
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail('full', array( 'class' => 'img-responsive' ));
-		} 
 
       // check if the flexible content field has rows of data
       if( have_rows('work_content') ):
@@ -30,15 +27,8 @@ get_header(); ?>
           while ( have_rows('work_content') ) : the_row();
 
               if( get_row_layout() == 'body_content' ):
-                ?>
-              
-              <div class="row portfolio-body-content">
-                <div class="col-xs-12 col-sm-7 col-sm-offset-5">
-                  <?php  the_sub_field('body_content');  ?>
-                </div>
-              </div>
-              
-              <?php
+                
+                include('template-parts/partial-body-content.php');
 
               elseif( get_row_layout() == 'image' ): 
 
