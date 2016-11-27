@@ -12,9 +12,9 @@ get_header(); ?>
 
 
 
-    <?php  while ( have_posts() ) : the_post(); ?>
-		<?php 
-		$work_unit_image = get_field('work_unit_image');
+    <?php 
+        while ( have_posts() ) : the_post(); 
+	        $work_unit_image = get_field('work_unit_image');
 		 ?>
 
 		<section class="container layout-portfolio">
@@ -49,6 +49,10 @@ get_header(); ?>
                         // nothing yet;
                 }
 
+                elseif( get_row_layout() == 'video' ): 
+                  include('template-parts/partial-video.php');
+
+                
               endif;
 
           endwhile;

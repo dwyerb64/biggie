@@ -104,15 +104,34 @@
                     },
                     {
                         "key": "5834c896661c0",
-                        "name": "images_with_caption",
-                        "label": "Images With Caption",
+                        "name": "body_content_with_quote",
+                        "label": "Body Content With Pull Quote",
                         "display": "row",
                         "sub_fields": [
                             {
-                                "key": "field_5834c8a1661c1",
-                                "label": "Images with Caption",
-                                "name": "images_with_caption",
-                                "type": "clone",
+                                "key": "field_583891bac0c70",
+                                "label": "Pull Quote",
+                                "name": "pull_quote",
+                                "type": "textarea",
+                                "instructions": "Please enter Pull Quote here.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "rows": 6,
+                                "new_lines": "wpautop"
+                            },
+                            {
+                                "key": "field_583891dbc0c71",
+                                "label": "Body Content",
+                                "name": "body_content",
+                                "type": "wysiwyg",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -121,13 +140,75 @@
                                     "class": "",
                                     "id": ""
                                 },
-                                "clone": [
-                                    "group_5834c01b78688"
-                                ],
-                                "display": "seamless",
-                                "layout": "block",
-                                "prefix_label": 0,
-                                "prefix_name": 0
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "58389225ee993",
+                        "name": "video",
+                        "label": "Video",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5838926dee994",
+                                "label": "Video URL",
+                                "name": "video_url",
+                                "type": "oembed",
+                                "instructions": "Copy and paste the youtube or vimeo URL into the field.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "video-container",
+                                    "id": ""
+                                },
+                                "width": "",
+                                "height": ""
+                            },
+                            {
+                                "key": "field_583892d2ee995",
+                                "label": "Play Button Colour",
+                                "name": "play_button_colour",
+                                "type": "color_picker",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": ""
+                            },
+                            {
+                                "key": "field_5838947aee996",
+                                "label": "Video Placeholder",
+                                "name": "video_placeholder",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "thumbnail",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
                             }
                         ],
                         "min": "",

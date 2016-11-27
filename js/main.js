@@ -25,6 +25,10 @@ BIGGIE.events = {
       BIGGIE.functions.homeWaypointsInit();
 
     },
+
+    portfolioInit: function(){
+      BIGGIE.functions.bindPortfolioVideoClicks();
+    },
     
     windowscroll: function() {
     
@@ -59,6 +63,18 @@ BIGGIE.functions = {
         slogan.text(title);
       }
     })
+  },
+
+  bindPortfolioVideoClicks: function(){
+    $(".play-button").click(function() {
+      var parent = $( this ).parent();
+      parent.find(".portfolio-placeholder").fadeOut();
+      $( this ).fadeOut();
+
+      parent.find("iframe")[0].src += "&autoplay=1";
+      // ev.preventDefault();
+    });
+
   }
 };
 
@@ -82,6 +98,8 @@ var $htmlBody = $('body,html'),
 $('.home').ready( BIGGIE.events.homeInit );
 
 $('.page-template-page_work').ready( BIGGIE.events.workInit );
+
+$('.layout-portfolio').ready( BIGGIE.events.portfolioInit );
 
 $(document).ready( BIGGIE.events.init );
 
