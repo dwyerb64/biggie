@@ -32,7 +32,7 @@ $tagline = get_bloginfo('description');
 				</p>
 			</div>
 		</div>
-	</div><!-- #primary -->
+
 		<?php
 
 			
@@ -55,7 +55,7 @@ $tagline = get_bloginfo('description');
 				<a href="<?php echo get_permalink() ?> ">
 					<?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
 				</a>
-				<h2><?php the_field('client') ?></h2>
+				<h2><?php the_title() ?></h2>
 				<h3><?php the_field('client') ?></h3>
 			</div>
 		<?php
@@ -65,7 +65,7 @@ $tagline = get_bloginfo('description');
 	
 		?>
 
-	
+	</div><!-- #primary -->
 </main><!-- #main -->
 
 

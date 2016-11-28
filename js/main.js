@@ -61,7 +61,8 @@ BIGGIE.functions = {
       handler: function(direction) {
         var title = $(this.element).attr("title");
         slogan.text(title);
-      }
+      },
+      offset: -1
     })
   },
 
