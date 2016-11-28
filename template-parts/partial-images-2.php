@@ -1,12 +1,13 @@
 <div class="row">
                       
     <?php 
-
       foreach( $images as $image ): 
-        ?>
-                <div class="col-xs-6 portfolio-image" style="background-image: url(<?php echo $image['sizes']['medium']; ?>) ">
-                </div> 
-                
+
+      if( !empty($image) ): ?>
+      <div class="col-xs-12 col-sm-6 portfolio-image">
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+      </div> 
+      <?php endif; ?>
 
 
     <?php 

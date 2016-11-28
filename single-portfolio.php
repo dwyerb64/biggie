@@ -30,6 +30,11 @@ get_header(); ?>
                 
                 include('template-parts/partial-body-content.php');
 
+
+              elseif( get_row_layout() ==  'body_content_with_quote'):
+
+                include('template-parts/partial-body-content-with-quote.php');
+
               elseif( get_row_layout() == 'image' ): 
 
                 $images = get_sub_field('images');

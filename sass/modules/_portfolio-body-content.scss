@@ -1,4 +1,17 @@
 .portfolio-body-content {
   padding-top: $body-padding;
   padding-bottom: $body-padding;
+  position: relative;
+
+  .pull-quote {
+    color: $colorPrimary1;
+    font-size: 1.3em;
+    font-weight: bold;
+    position: absolute;
+    bottom: $body-padding;
+
+    @media (max-width: 767px) { 
+      position: relative;
+    }
+  }
 }

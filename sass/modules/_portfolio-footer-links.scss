@@ -1,7 +1,10 @@
 .portfolio-footer-links {
   background-color: $colorTertiary1;
   a {
-    color: white;  
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: lowercase;  
     &:hover{
       color: $colorPrimary1;
       text-decoration: none;
