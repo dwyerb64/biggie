@@ -2,7 +2,7 @@
   z-index: 1000;
 
 
-  @include align-fixed-element-with-responsive-container();
+  @include alignFixedElemWithGrid(left);
 
   top: 20%;
   h1 {

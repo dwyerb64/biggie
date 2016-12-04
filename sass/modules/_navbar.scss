@@ -1,13 +1,12 @@
 .menu {
 	z-index: 1000;
 	position: fixed;
-  right: 30px;
   transform: rotate(-90deg);
   transform-origin: top right; 
   width: 100%;
   width: 100vh;
 	list-style-type: none;
-	margin-right: 40px;
+  @include alignFixedElemWithGrid(right, 10px);
 
 	> li {
 		display: inline-block;
@@ -21,12 +20,14 @@
 	}
 
 	&#social-menu {
-		left: 30px;
 		transform-origin: top left; 
 		bottom: 20px;
 		> li {
 		float: left;
 		}
+
+    @include alignFixedElemWithGrid(left, 40px);
+
 	}
     
 }
