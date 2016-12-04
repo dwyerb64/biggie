@@ -2,18 +2,71 @@
 .home-item {
   min-height: 100vh;
   position: relative;
-
+  margin-bottom: 190px;
+  
+  a {
+    float: left;
+  }
   .company-description {
     position: absolute;
     left: 0px;
     bottom: 40px;
     padding: 15px;
-    color: blue;
     font-size: 20px;
     width: 100%;
     color: $colorPrimary1;
-    @media only screen and (min-width: 768px){
-      width: 55%;
+    font-weight: 700;
+    line-height: 26px;
+
+  }
+
+  .home-item-image {
+    position: relative;
+  }
+
+  .home-portfolio-title {
+    height: 40px;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -300px;
+  }
+  
+  h2, h3 {
+    color: black;
+    font-size: 8.41px * 1.783;
+    line-height: 12px * 1.783;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  h3 {
+    font-weight: 300;
+    bottom: 0;
+  }  
+
+  &.right {
+    .home-portfolio-title {
+      text-align: right;
+      margin-left: -300px;
+      left:0;
     }
   }
+
+  // &:nth-child(even) {
+  //   float: right;
+  //   text-align: right;
+
+  //   a {
+  //     float: right
+  //   }
+
+  //   img {
+  //     margin-left: 20px;
+  //   }
+
+  // }
+
 }

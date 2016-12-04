@@ -20,12 +20,17 @@ $tagline = get_bloginfo('description');
 
 
 <div class="container" id="slogan-container">
-	<h1 class="slogan-title"><?php echo $tagline; ?></h1>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 no-left-padding">
+			<h1 class="slogan-title no-left-padding"><?php echo $tagline; ?></h1>
+		</div>
+	</div>
+	
 </div>
 
 <main class="container">
 	<div class="row">
-		<div class="col-xs-12 home-item" title="<?php echo $tagline; ?>">
+		<div class="col-xs-12 col-md-6 col-md-offset-1 home-item no-left-padding" title="<?php echo $tagline; ?>">
 			<div class="company-description">
 				<p>
 					<?php echo get_theme_mod( 'company_description' ); ?>
@@ -39,8 +44,11 @@ $tagline = get_bloginfo('description');
 			$workQuery = getListOfPortfolios(10);
 			
 			if( $workQuery->have_posts() ) {
+						$homeIndex = 0;
 						while ($workQuery->have_posts()) : $workQuery->the_post();
-			
+						$homeIndex++;
+						
+
 		?>
 			
 							
@@ -48,17 +56,43 @@ $tagline = get_bloginfo('description');
 			$thumb_id = get_post_thumbnail_id();
 			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
 			$thumb_url = $thumb_url_array[0];
+
+			if($homeIndex % 2 == 0):
 		?>
 
 			<div class="col-xs-12 home-item" title="<?php the_title( ) ?>">
-				
-				<a href="<?php echo get_permalink() ?> ">
-					<?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
-				</a>
-				<h2><?php the_title() ?></h2>
-				<h3><?php the_field('client') ?></h3>
+				<div class="row">
+					<a class="col-sm-7 home-item-image" href="<?php echo get_permalink() ?> ">
+						<?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+						<div class="home-portfolio-title">
+							<h2><?php the_title() ?></h2>
+							<h3><?php the_field('client') ?></h3>
+						</div>
+					</a>
+				</div>
 			</div>
+
+			<?php 
+			else:
+				?>
+
+			<div class="col-xs-12 home-item right" title="<?php the_title( ) ?>">
+				<div class="row">
+					
+					</div>
+					<a class="col-sm-7 col-sm-offset-5 home-item-image" href="<?php echo get_permalink() ?> ">
+						<?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+						<div class="home-portfolio-title">
+							<h2><?php the_title() ?></h2>
+							<h3><?php the_field('client') ?></h3>
+						</div>
+					</a>
+				</div>
+			</div>
+
+
 		<?php
+				endif;
 				endwhile;
 				wp_reset_postdata();
 			}

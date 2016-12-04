@@ -4,24 +4,6 @@
         "title": "Footer Content",
         "fields": [
             {
-                "key": "field_5837598904251",
-                "label": "Footer Body",
-                "name": "footer_body",
-                "type": "wysiwyg",
-                "instructions": "Enter footer text content here.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 0
-            },
-            {
                 "key": "field_58388d5e88c9c",
                 "label": "Social Links",
                 "name": "social_links",
@@ -54,22 +36,17 @@
                             "id": ""
                         },
                         "choices": {
-                            "facebook": "FaceBook",
-                            "youtube": "Youtube",
-                            "twitter": "Twitter",
-                            "linkedIn": "LinkedIn",
-                            "pinterest": "Pinterest",
-                            "googlePlus": "Google Plus",
-                            "tumblr": "Tumblr",
-                            "instagram": "Instagram",
-                            "vimeo": "Vimeo"
+                            "FaceBook": "FaceBook",
+                            "Twitter": "Twitter",
+                            "Vimeo": "Vimeo",
+                            "Youtube": "Youtube"
                         },
                         "allow_null": 0,
                         "other_choice": 0,
                         "save_other_choice": 0,
                         "default_value": "",
                         "layout": "vertical",
-                        "return_format": "array"
+                        "return_format": "value"
                     },
                     {
                         "key": "field_58388dc088c9e",
@@ -88,6 +65,119 @@
                         "placeholder": ""
                     }
                 ]
+            },
+            {
+                "key": "field_58441213103db",
+                "label": "company Name",
+                "name": "company_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Big O",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5844123b103dc",
+                "label": "Address Line 1",
+                "name": "address_line_1",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "9 Mount Street Crescent",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_584412ca103dd",
+                "label": "Address Line 2",
+                "name": "address_line_2",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Dublin 2",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_584412d8103de",
+                "label": "Country",
+                "name": "country",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Ireland",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_584412f2103df",
+                "label": "Telephone Number",
+                "name": "telephone_number",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "+353 (1) 531 255",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5844132a103e0",
+                "label": "Email Address",
+                "name": "email_address",
+                "type": "email",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "hi@bigo.ie",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             }
         ],
         "location": [
