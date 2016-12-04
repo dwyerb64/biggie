@@ -19,7 +19,7 @@ get_header(); ?>
         'post_type' => $type,
         'post_status' => 'publish',
         'post__not_in' => array(get_the_ID()),
-        'posts_per_page' => 10);
+        'posts_per_page' => 20);
       $workQuery = null;
       $workQuery = new WP_Query($queryArgs);
       
@@ -37,7 +37,9 @@ get_header(); ?>
 
       <div class="col-xs-12 col-sm-6 work-item work-item-enter">
         <a href="<?php echo get_permalink() ?> ">
-          <?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+          <div class="img-container">
+            <?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+          </div>
           <h2><?php the_title( ) ?></h2>
           <h3><?php the_field('client') ?></h3>
         </a>

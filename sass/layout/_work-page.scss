@@ -1,3 +1,43 @@
 .work-title {
 	padding: 80px 0px;
 }
+
+.work-item {
+	
+	.img-container, img {
+		transition: transform 0.4s ease-out;
+		overflow: hidden;
+	}
+
+	&:hover {
+		.img-container {
+	        transform:scale(0.95,0.95);
+
+	        img {
+				transform:scale(1.15,1.15);        	
+	        }
+	    }
+    }
+    a{
+		text-decoration: none;
+		color: black;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#footer-container .page-work{
+	margin-top: 100px;
+}
+
+
