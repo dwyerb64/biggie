@@ -26,7 +26,7 @@
 				</div><!-- .footer-content -->
 
 				<div class="col-xs-12 col-md-6 social-icons-container">
-					<?php include 'template-parts\footer-social-icons.php' ?>;
+					<?php include 'template-parts/footer-social-icons.php' ?>;
 				</div><!-- .social-icons-container -->	
 
 			</div><!-- .site-info -->
