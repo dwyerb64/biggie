@@ -1,5 +1,5 @@
 .work-title {
-	padding: 80px 0px;
+	padding: 80px 15px;
 	h1{
 		font-size: 90.63px * 1.434;
 		font-weight: 700;
@@ -10,6 +10,11 @@
 }
 
 .work-item {
+
+  .img-container {
+  margin-bottom: 20px;
+  }  
+
   h2, h3 {
     color: black;
     font-size: 8.41px * 1.783;
@@ -44,17 +49,6 @@
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 #footer-container .page-work{
 	margin-top: 100px;
