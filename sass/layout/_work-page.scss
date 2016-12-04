@@ -1,15 +1,24 @@
 .work-title {
 	padding: 80px 0px;
+	font-size: 90.63px * 1.434;
+	font-weight: 700;
+	line-height: 98px * 1.434;
 }
 
 .work-item {
-	h2{
-		font-weight: bold;
-    	font-size: 20px;
-	}
-	h3 {
-		font-size: 20px;
-	}
+  h2, h3 {
+    color: black;
+    font-size: 8.41px * 1.783;
+    line-height: 12px * 1.783;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  h3 {
+    font-weight: 300;
+    bottom: 0;
+  }  
 	
 	.img-container, img {
 		transition: transform 0.4s ease-out;
