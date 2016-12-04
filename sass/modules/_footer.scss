@@ -36,7 +36,13 @@
 	.social-icons-container{
     padding-top: 8px;
 		font-size: 10px;
-	}
+		.fa-stack {
+			.fa-inverse { transition: color 0.2s;}
+			&:hover .fa-inverse {
+				color: $colorPrimary1;
+			}
+		}
+}
 
 	a{
 		color: inherit;
