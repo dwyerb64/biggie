@@ -63,7 +63,7 @@ $tagline = get_bloginfo('description');
 			<div class="col-xs-12 home-item" title="<?php the_title( ) ?>">
 				<div class="row">
 					<a class="col-sm-7 home-item-image" href="<?php echo get_permalink() ?> ">
-						<?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+						<?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-responsive' ) ) ?>
 						<div class="home-portfolio-title">
 							<h2><?php the_title() ?></h2>
 							<h3><?php the_field('client') ?></h3>
@@ -81,7 +81,7 @@ $tagline = get_bloginfo('description');
 					
 					</div>
 					<a class="col-sm-7 col-sm-offset-5 home-item-image" href="<?php echo get_permalink() ?> ">
-						<?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+						<?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-responsive' ) ) ?>
 						<div class="home-portfolio-title">
 							<h2><?php the_title() ?></h2>
 							<h3><?php the_field('client') ?></h3>

@@ -16,7 +16,7 @@
 		<footer id="colophon" class=" container site-footer" role="contentinfo">
 			<div class="row site-info">
 
-				<div class="col-xs-12 col-md-5 col-md-offset-1 footer-content">
+				<div class="col-xs-12 col-md-6 footer-content">
 					<p class="contact-name"><?php the_field('company_name', 'option'); ?></p>
 					<p class="contact-address"><?php the_field('address_line_1', 'option'); ?></p>
 					<p class="contact-address"><?php the_field('address_line_2', 'option'); ?></p>
