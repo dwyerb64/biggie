@@ -2,6 +2,11 @@
 .home-item {
   position: relative;
   margin-bottom: 190px;
+
+  &:first-child {
+    height: 100vh;
+  }
+
   
   a {
     float: left;
