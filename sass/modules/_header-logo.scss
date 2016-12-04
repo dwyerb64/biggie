@@ -1,0 +1,19 @@
+.header-logo-container {
+  position: relative;
+}
+
+.header-logo {
+  z-index: 1000;
+  cursor: pointer;
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  max-width: 200px;
+}
+
+
+@media (min-width: 768px) {
+    .header-logo{
+      top: 30px;
+    }
+}

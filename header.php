@@ -20,8 +20,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<a href="<?php echo get_home_url() ?>" class="header-logo">
-  <img src="<?php echo get_header_image(); ?>">
-</a>
+<div class="container header-logo-container">
+  <a href="<?php echo get_home_url() ?>" class="header-logo">
+    <img src="<?php echo get_header_image(); ?>">
+  </a>
+</div>
+
 <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>	
 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

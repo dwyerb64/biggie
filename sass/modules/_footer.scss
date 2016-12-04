@@ -1,6 +1,7 @@
 #footer-container {
 	background-color: $colorTertiary1;
-	padding: 45px 30px 45px 8px;
+	padding-top: 50px;
+	padding-bottom: 80px;
 
 	p{
 		color: $colorWhitish;
@@ -8,13 +9,32 @@
 	}
 
 	.footer-content{
-		width: 70%;
+		font-size: 18px;
 		padding-top: 15px;
+
+		p {
+			margin-bottom: 0px;
+		}
+
+		.contact-name {
+			font-weight: 700;
+			line-height: 23px;
+		}
+		.contact-address {
+			font-weight: 500;
+			line-height: 24px;	
+		}
+		.contact-info {
+			font-weight: 500;
+			line-height: 22px;
+			strong {
+				font-weight: 700;
+			}
+		}
 	}
 
 	.social-icons-container{
-		width: 30%;
-    	padding-top: 8px;
+    padding-top: 8px;
 		font-size: 10px;
 	}
 
@@ -24,6 +44,13 @@
 			color: black;
 		} 
 	}
+	
+
+  @media (min-width: 1200px){
+    .col-md-offset-1 {
+        padding-left: 0px;
+    }
+  }
 	
 }
 

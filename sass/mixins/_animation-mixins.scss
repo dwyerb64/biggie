@@ -26,3 +26,20 @@
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
+
+@mixin transition-color-letter-by-letter($hoverColor) {
+    [class^="char"]{
+      transition: color 0.2s;
+    }
+    
+
+    @for $i from 1 through 30 {
+      .char#{$i} {
+        transition-delay: $i  * 0.02s
+      }
+    }
+
+    &:hover [class^="char"]{
+      color: $hoverColor;
+    }
+}

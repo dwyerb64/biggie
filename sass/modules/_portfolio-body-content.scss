@@ -3,15 +3,60 @@
   padding-bottom: $body-padding;
   position: relative;
 
+  h1 {
+    color: $colorSecondary2;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  h2 {
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  p{
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+
+  .portfolio-title {
+    position: absolute;
+    top: $body-padding;
+    h1{
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 41px;
+    }
+  }
+
   .pull-quote {
-    color: $colorPrimary1;
-    font-size: 1.3em;
-    font-weight: bold;
+    p {
+      color: $colorPrimary1;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
     position: absolute;
     bottom: $body-padding;
 
     @media (max-width: 767px) { 
       position: relative;
     }
+  }
+
+  .portfolio-body-text {
+    padding-top: 20px;
   }
 }

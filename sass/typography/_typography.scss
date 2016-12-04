@@ -14,6 +14,13 @@ body{
 
 .menu 	{
 	li {
+		// font-family: Gotham;
+		color: $colorSecondary2;
+		font-size: 13px;
+		font-weight: 700;
+		// line-height: 98px;
+		// transform: matrix(0,-1,1,0,0,0);
+
 		font-weight: bold;
 		font-size: 20px;
 		a {
@@ -26,4 +33,5 @@ body{
 		}
 	}
 }
+
 

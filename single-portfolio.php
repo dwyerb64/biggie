@@ -24,7 +24,9 @@ get_header(); ?>
       if( have_rows('work_content') ):
 
            // loop through the rows of data
+          $rowIndex = 0;
           while ( have_rows('work_content') ) : the_row();
+          $rowIndex++;
 
               if( get_row_layout() == 'body_content' ):
                 
@@ -33,8 +35,12 @@ get_header(); ?>
 
               elseif( get_row_layout() ==  'body_content_with_quote'):
 
-                include('template-parts/partial-body-content-with-quote.php');
-
+                if($rowIndex == 2):
+                  include('template-parts/partial-body-content-with-quote-and-title.php');  
+                else :
+                  include('template-parts/partial-body-content-with-quote.php');
+                endif;
+                
               elseif( get_row_layout() == 'image' ): 
 
                 $images = get_sub_field('images');

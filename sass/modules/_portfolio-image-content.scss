@@ -1,10 +1,10 @@
 .portfolio-image {
   
   overflow: hidden;
-  padding: 10px 5px;
+  padding: 20px 10px;
 
   img {
-    margin-top: -20px;
+    margin-top: -40px;
     width: 100%;
   }
   
@@ -12,4 +12,9 @@
     float: right; 
   }
 
+}
+
+.portfoltio-images-1, .portfoltio-images-2, .portfoltio-images-3 {
+  margin-top: $body-padding;
+  margin-bottom: $body-padding;
 }

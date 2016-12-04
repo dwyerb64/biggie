@@ -1,29 +1,30 @@
 .portfolio-footer-links {
   background-color: $colorTertiary1;
+
+  .row {
+    margin-top: 45px;
+    margin-bottom: 0px;
+  }
+
   .letter-by-letter-transition { 
     color: white;
-    font-size: 100px;
-    font-weight: bold;
+    font-size: 91.71px;
+    line-height: 98px;
+    font-weight: 700;
     text-transform: lowercase;  
+    transform: scale(1.418,1.418);
 
     &:hover {
       text-decoration: none;
       cursor: pointer;
     }
     
-    [class^="char"]{
-      transition: color 0.2s;
-    }
-    
+    @include transition-color-letter-by-letter($colorPrimary1);
+  }
 
-    @for $i from 1 through 30 {
-      .char#{$i} {
-        transition-delay: $i  * 0.02s
-      }
-    }
-
-    &:hover [class^="char"]{
-      color: $colorPrimary1;
+  @media (min-width: 1200px){
+    .col-md-offset-1 {
+        padding-left: 0px;
     }
   }
 }

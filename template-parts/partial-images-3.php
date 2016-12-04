@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row portfoltio-images-3">
                       
     <?php 
 
