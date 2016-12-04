@@ -1,15 +1,31 @@
 .portfolio-footer-links {
   background-color: $colorTertiary1;
-  a {
+  .letter-by-letter-transition { 
     color: white;
     font-size: 100px;
     font-weight: bold;
     text-transform: lowercase;  
-    &:hover{
-      color: $colorPrimary1;
+
+    &:hover {
       text-decoration: none;
       cursor: pointer;
     }
+    
+    [class^="char"]{
+      transition: color 0.2s;
+    }
+    
+
+    @for $i from 1 through 30 {
+      .char#{$i} {
+        transition-delay: $i  * 0.02s
+      }
+    }
+
+    &:hover [class^="char"]{
+      color: $colorPrimary1;
+    }
   }
-  
 }
+
+

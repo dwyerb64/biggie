@@ -13,9 +13,7 @@
   <div class="row">
     <div class="xs-col-12">
       <h1>
-        <a href="<?php echo get_permalink() ?> ">
-          <?php the_title() ?>
-        </a>
+        <a href="<?php echo get_permalink() ?> " class="letter-by-letter-transition"><?php the_title() ?></a>
       </h1>
     </div>
   </div>

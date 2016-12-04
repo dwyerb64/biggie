@@ -28,6 +28,7 @@ BIGGIE.events = {
 
     portfolioInit: function(){
       BIGGIE.functions.bindPortfolioVideoClicks();
+      BIGGIE.functions.initLetteringForHoverAnimations();
     },
     
     windowscroll: function() {
@@ -76,6 +77,10 @@ BIGGIE.functions = {
       // ev.preventDefault();
     });
 
+  },
+
+  initLetteringForHoverAnimations: function(){
+    $(".letter-by-letter-transition").lettering();
   }
 };
 
