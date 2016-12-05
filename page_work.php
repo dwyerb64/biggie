@@ -38,10 +38,10 @@ get_header(); ?>
       <div class="col-xs-12 col-sm-6 work-item work-item-enter">
         <a href="<?php echo get_permalink() ?> ">
           <div class="img-container">
-            <?php the_post_thumbnail( 'medium_large', array( 'class' => '' ) ) ?>
+            <?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-responsive' ) ) ?>
           </div>
           <h2><?php the_title( ) ?></h2>
-          <h3><?php the_field('client') ?></h3>
+          <h3 class="hidden-xs"><?php the_field('client') ?></h3>
         </a>
       </div>
     <?php
