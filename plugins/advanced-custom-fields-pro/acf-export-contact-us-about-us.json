@@ -7,7 +7,7 @@
                 "key": "field_58265bb10cb13",
                 "label": "About Us Title",
                 "name": "about_us_title",
-                "type": "text",
+                "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -17,11 +17,9 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "formatting": "html",
-                "maxlength": ""
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0
             },
             {
                 "key": "field_58265c2c0cb14",
@@ -57,10 +55,9 @@
         "style": "seamless",
         "label_placement": "top",
         "instruction_placement": "label",
-        "hide_on_screen": [],
+        "hide_on_screen": "",
         "active": 1,
-        "description": "",
-        "old_ID": 51
+        "description": ""
     },
     {
         "key": "group_5834c14c87518",
