@@ -27,17 +27,19 @@
 
 
 @media (min-width: 768px){
-  .work-title {
-  padding: 80px 15px;
 
-    h1{
+  .work-title h1{
       font-size: 90.63px * 1.434;
       line-height: 98px * 1.434;
     } 
-  }
 
   .page-template-page_work {
     background: none;
   }
+
+  main {
+    margin-top: 50px;
+  }
+  
 }
 
