@@ -1,7 +1,7 @@
 #footer-container {
 	background-color: $colorTertiary1;
-	padding-top: 50px;
-	padding-bottom: 80px;
+	padding-bottom: 30px;
+    padding-top: 20px;
 
 	p{
 		color: $colorWhitish;
@@ -11,22 +11,21 @@
 	.footer-content{
 		font-size: 18px;
 		padding-top: 15px;
+		padding-left: 20px;
 
 		p {
 			margin-bottom: 0px;
+			line-height: 1.3;
 		}
 
 		.contact-name {
 			font-weight: 700;
-			line-height: 23px;
 		}
 		.contact-address {
 			font-weight: 500;
-			line-height: 24px;	
 		}
 		.contact-info {
 			font-weight: 500;
-			line-height: 22px;
 			strong {
 				font-weight: 700;
 			}
@@ -47,7 +46,6 @@
 	a{
 		color: inherit;
 		&:hover{
-			color: black;
 		} 
 	}
 	
