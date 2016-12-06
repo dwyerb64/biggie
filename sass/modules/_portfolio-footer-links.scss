@@ -7,12 +7,17 @@
   }
 
   .letter-by-letter-transition { 
+
     color: white;
-    font-size: 91.71px;
-    line-height: 98px;
+    font-size: 48px;
+    line-height: 51px;
     font-weight: 700;
     text-transform: lowercase;  
-    transform: scale(1.418,1.418);
+
+    @media only screen and (min-width: 768px){
+      font-size: 91.71px;
+      line-height: 98px;
+    }
 
     &:hover {
       text-decoration: none;

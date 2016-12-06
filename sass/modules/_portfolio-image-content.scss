@@ -1,8 +1,11 @@
 .portfolio-image {
   
   overflow: hidden;
-  padding: 20px 10px;
-
+  padding: 20px 15px;
+  @media only screen and (min-width: 768px){
+    padding: 20px 10px;
+  }
+  
   img {
     margin-top: -40px;
     width: 100%;
@@ -15,6 +18,9 @@
 }
 
 .portfoltio-images-1, .portfoltio-images-2, .portfoltio-images-3 {
-  margin-top: $body-padding;
-  margin-bottom: $body-padding;
+  margin-bottom: $body-padding-mobile;
+  @media only screen and (min-width: 768px){
+    margin-top: $body-padding;
+    margin-bottom: $body-padding;
+  }
 }

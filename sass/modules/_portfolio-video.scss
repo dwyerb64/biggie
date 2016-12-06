@@ -1,7 +1,12 @@
 .portfolio-video {
 
   @include aspectRatio($aspectRatio16x9, 'iframe, .portfolio-placeholder');
-  margin-bottom: $body-padding;
+  
+  margin-bottom: $body-padding-mobile;
+  @media only screen and (min-width: 768px){
+    margin-bottom: $body-padding;
+  }
+  
   
   $iconSize: 62px;
   .play-button {

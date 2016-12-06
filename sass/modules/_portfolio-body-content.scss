@@ -1,6 +1,11 @@
 .portfolio-body-content {
-  padding-top: $body-padding;
-  padding-bottom: $body-padding;
+
+  padding-bottom: $body-padding-mobile;
+  @media only screen and (min-width: 768px){
+    padding-top: $body-padding;
+    padding-bottom: $body-padding;
+  }
+  
   position: relative;
 
   h1 {
@@ -31,8 +36,11 @@
 
 
   .portfolio-title {
-    position: absolute;
-    top: $body-padding;
+    @media only screen and (min-width: 768px){
+      position: absolute;
+      top: $body-padding;
+    }
+
     h1{
       font-size: 35px;
       font-weight: 700;
