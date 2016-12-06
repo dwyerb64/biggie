@@ -29,7 +29,14 @@
     }
   }
 
+  @include alignFixedElemWithGrid(right, 10px);
+
+  &#social-menu {
+    @include alignFixedElemWithGrid(left, 40px);
+  }
+
   @media only screen and (min-width: 768px){
+    
   	z-index: 1000;
   	position: fixed;
     transform: rotate(-90deg);
@@ -38,7 +45,7 @@
     width: 100vh;
   	list-style-type: none;
     top: 0px;
-    @include alignFixedElemWithGrid(right, 10px);
+
 
   	> li {
   		display: inline-block;
@@ -64,8 +71,6 @@
         margin-right: 90px;
         margin-left: 25px;
   		}
-
-      @include alignFixedElemWithGrid(left, 40px);
 
   	}
   }

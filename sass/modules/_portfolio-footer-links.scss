@@ -2,8 +2,15 @@
   background-color: $colorTertiary1;
 
   .row {
-    margin-top: 45px;
-    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+
+    @media only screen and (min-width: 768px){
+      margin-top: 45px;
+      margin-bottom: 0px;
+    
+    }
   }
 
   .letter-by-letter-transition { 

@@ -1,12 +1,10 @@
 @mixin alignFixedElemWithGrid($side: left, $offset: 0px) {
 
-    position: fixed;
-
-    #{$side}: 50%;
-
 
 
     @media (min-width: 768px){
+      position: fixed;
+      #{$side}: 50%;
       margin-#{$side}: -((750px / 2) + $offset);
     }
     @media (min-width: 992px){
