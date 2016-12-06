@@ -1,4 +1,24 @@
 #slogan-container {
+    margin-left:18px;
+    margin-top: 49px;
+    text-transform: lowercase;
+
+  .slogan-title {
+    margin-bottom: 20px;
+  }
+  
+  h1{
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 0.9;
+  }
+}
+
+
+
+@media (min-width: 480px){
+
+#slogan-container {
   z-index: 1000;
 
 
@@ -7,10 +27,8 @@
   top: 20%;
   h1 {
     font-size: 90.63px * 1.434;;
-    font-weight: 700;
     line-height: 98px * 1.434;
-
     font-weight: bold;
-    text-transform: lowercase;
   }
+}
 }

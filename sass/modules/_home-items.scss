@@ -1,4 +1,47 @@
+.company-description {
+    padding: 10px 20px;
+    font-size: 10px;
+    color: $colorPrimary1;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px; //This needs addressing (cancels negative margin on home-item img)
 
+    p{
+      margin:0px;
+    }
+  }
+
+.home-item {
+
+  h2 {
+        color: black;
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 700;
+        margin-bottom: 0px;
+        margin-top: 10px;
+      }
+
+  a {
+    text-decoration: none;
+    }
+
+  img {
+      margin: 5px;
+      padding-right: 10px;
+      margin-top: -25px; //This needs addressing
+  }
+
+}
+
+.home-portfolio-title {
+  padding-left: 5px;
+}
+
+
+
+
+@media (min-width: 480px){
 .home-item {
   position: relative;
   margin-bottom: 190px;
@@ -18,8 +61,6 @@
     padding: 15px;
     font-size: 20px;
     width: 100%;
-    color: $colorPrimary1;
-    font-weight: 700;
     line-height: 26px;
 
   }
@@ -58,5 +99,7 @@
       left:0;
     }
   }
+
+}
 
 }

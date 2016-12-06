@@ -18,7 +18,6 @@ $tagline = get_bloginfo('description');
 ?>
 
 
-
 <div class="container" id="slogan-container">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 no-left-padding">
@@ -66,7 +65,7 @@ $tagline = get_bloginfo('description');
 						<?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-responsive' ) ) ?>
 						<div class="home-portfolio-title">
 							<h2><?php the_title() ?></h2>
-							<h3><?php the_field('client') ?></h3>
+							<h3 class="hidden-xs"><?php the_field('client') ?></h3>
 						</div>
 					</a>
 				</div>
@@ -84,7 +83,7 @@ $tagline = get_bloginfo('description');
 						<?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-responsive' ) ) ?>
 						<div class="home-portfolio-title">
 							<h2><?php the_title() ?></h2>
-							<h3><?php the_field('client') ?></h3>
+							<h3 class="hidden-xs"><?php the_field('client') ?></h3>
 						</div>
 					</a>
 				</div>
