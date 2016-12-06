@@ -9,7 +9,9 @@ get_header(); ?>
 			<h1><?php the_field('about_us_title'); ?></h1>
 		</div>
 		<div class="content-block col-md-6">
-			<p><?php the_field('about_us_details'); ?></p>
+			<div class="wrapper">
+				<p><?php the_field('about_us_details'); ?></p>
+			</div>
 		</div>
 	</div>	
 </section>

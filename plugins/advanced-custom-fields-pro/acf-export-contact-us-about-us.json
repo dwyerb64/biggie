@@ -81,25 +81,6 @@
                 "maxlength": "",
                 "rows": "",
                 "new_lines": "br"
-            },
-            {
-                "key": "field_580c895e84e6d",
-                "label": "Contact Details Content",
-                "name": "contact_details_content",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": "br"
             }
         ],
         "location": [
@@ -120,7 +101,6 @@
             "the_content"
         ],
         "active": 1,
-        "description": "",
-        "old_ID": 9
+        "description": ""
     }
 ]
