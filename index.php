@@ -17,6 +17,9 @@ get_header();
 $tagline = get_bloginfo('description');
 ?>
 
+<?php
+include('template-parts/home-featured-image.php');
+?>
 
 <div class="container" id="slogan-container">
 	<div class="row">
