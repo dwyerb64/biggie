@@ -4,16 +4,17 @@
 
     #{$side}: 50%;
 
-    @media (min-width: 1200px){
-      margin-#{$side}: -((1170px / 2) + $offset);
+
+
+    @media (min-width: 768px){
+      margin-#{$side}: -((750px / 2) + $offset);
     }
     @media (min-width: 992px){
       margin-#{$side}: -((970px / 2) + $offset);
     }
-    @media (min-width: 768px){
-      margin-#{$side}: -((750px / 2) + $offset);
+    @media (min-width: 1200px){
+      margin-#{$side}: -((1170px / 2) + $offset);
     }
-    
     
 }
     

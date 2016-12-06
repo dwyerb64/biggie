@@ -10,8 +10,11 @@ var BIGGIE = BIGGIE || {};
 BIGGIE.events = {
 
     init: function(){
-      
-      
+      var mq = window.matchMedia( "(max-width: 767px)" );
+
+      if (mq.matches) {
+        BIGGIE.functions.bindMobileMenuClick();
+      }
 
     },
 
@@ -42,6 +45,17 @@ BIGGIE.functions = {
     
   functionName: function(){
         
+  },
+
+  bindMobileMenuClick: function(){
+
+    $('#mobile-menu').click(function(){
+      $('.menu').toggleClass('expanded');
+      $(this).toggleClass('expanded');
+      $('.mobile-menu-home').toggleClass('expanded');
+
+    });
+
   },
 
   workWaypointsInit: function(){

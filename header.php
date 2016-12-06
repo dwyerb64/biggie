@@ -27,6 +27,13 @@
 </div>
 
 <div class="container">
-<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>	
+<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu', 'container_class' => 'hidden-xs' ) ); ?>	
 </div>
-<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu') ); ?>
+<button type="button" id="mobile-menu" class="visible-xs collapsed navbar-toggle" > 
+  <span class="icon-bar"></span> 
+  <span class="icon-bar"></span>
+</button>
+<a href="<?php echo get_home_url() ?>" class="mobile-menu-home">
+  <span></span>
+</a>  
