@@ -1,4 +1,11 @@
 .layout-portfolio {
-  padding-bottom: $body-padding * 2;
+  padding-bottom: $body-padding;
   padding-top: $body-padding * 2;
+  @media (max-width: 767px) { 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media only screen and (min-width: 768px){
+    padding-bottom: $body-padding * 2;
+  }
 }
