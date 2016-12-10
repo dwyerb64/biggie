@@ -52,8 +52,7 @@ BIGGIE.functions = {
     $('#mobile-menu').click(function(){
       $('.menu').toggleClass('expanded');
       $(this).toggleClass('expanded');
-      $('.mobile-menu-home').toggleClass('expanded');
-
+      $('.mobile-menu-home').toggleClass('expanded animated bounceInDown');
     });
 
   },

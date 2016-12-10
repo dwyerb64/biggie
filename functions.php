@@ -171,6 +171,8 @@ add_action( 'admin_menu', 'remove_menus' );
 function bigo_scripts() {
 	wp_enqueue_style( 'bigo-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/bower_components/animate.css/animate.css' );
+
 	wp_enqueue_style( 'bigo-google-font', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700' );
 
 	wp_enqueue_script( 'bigo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
