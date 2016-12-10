@@ -63,6 +63,9 @@ get_header(); ?>
                 elseif( get_row_layout() == 'video' ): 
                   include('template-parts/partial-video.php');
 
+                elseif( get_row_layout() == 'background_image' ): 
+                  include('template-parts/partial-background-image.php');
+
                 
               endif;
 

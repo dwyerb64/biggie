@@ -1,4 +1,4 @@
-<div class="row  portfoltio-images-1">
+<div class="row  portfolio-background-image">
                       
     <?php 
       foreach( $images as $image ): 

@@ -15,6 +15,23 @@
     float: right; 
   }
 
+  &.landing {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 530px;
+    max-height: 530px;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: 768px){
+      margin-bottom: 40px;
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+  }
+
 }
 
 .portfoltio-images-1, .portfoltio-images-2, .portfoltio-images-3 {
