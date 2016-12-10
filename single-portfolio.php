@@ -35,11 +35,7 @@ get_header(); ?>
 
               elseif( get_row_layout() ==  'body_content_with_quote'):
 
-                if($rowIndex == 2):
-                  include('template-parts/partial-body-content-with-quote-and-title.php');  
-                else :
                   include('template-parts/partial-body-content-with-quote.php');
-                endif;
                 
               elseif( get_row_layout() == 'image' ): 
 

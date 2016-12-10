@@ -1,4 +1,5 @@
 <div class="row portfolio-body-content">
+    <?php include('partial-custom-title.php'); ?>
   <div class="col-xs-12 col-sm-4 pull-quote hidden-xs">
     <p><?php  the_sub_field('pull_quote');  ?></p>
   </div>
