@@ -27,7 +27,7 @@
 
     @include  transition(all 0.5s);
     &:hover {
-      @include  materialDesignShadow();
+      // @include  materialDesignShadow();
       @include  spin();
     }
 

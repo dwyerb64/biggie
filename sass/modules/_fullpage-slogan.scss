@@ -1,4 +1,6 @@
 #slogan-container {
+
+    @include fadeIn($duration: 1s);
     margin-left:18px;
     margin-top: 49px;
     text-transform: lowercase;

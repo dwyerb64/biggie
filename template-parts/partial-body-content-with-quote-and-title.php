@@ -1,6 +1,11 @@
 <div class="row portfolio-body-content">
   <div class="col-xs-12 col-sm-3 portfolio-title">
-    <h1><?php  the_title();  ?></h1>
+    <?php if (the_sub_field('title')) {
+      echo the_sub_field('title');
+    } else{ ?>
+      <h1><?php  the_title();  ?></h1>  
+    <?php } ?>
+    
   </div>
   <div class="col-xs-12 col-sm-4 pull-quote hidden-xs">
     <p><?php  the_sub_field('pull_quote');  ?></p>

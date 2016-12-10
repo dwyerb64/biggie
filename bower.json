@@ -20,9 +20,10 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "animate.css": "^3.5.2"
+    "animatewithsass": "^3.2.2"
   },
   "devDependencies": {
-    "letteringjs": "Lettering.js#^0.7.0"
+    "letteringjs": "Lettering.js#^0.7.0",
+    "animatewithsass": "^3.2.2"
   }
 }

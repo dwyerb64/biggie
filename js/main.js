@@ -12,6 +12,8 @@ BIGGIE.events = {
     init: function(){
       var mq = window.matchMedia( "(max-width: 767px)" );
 
+      $htmlBody.addClass('js-loaded');
+
       if (mq.matches) {
         BIGGIE.functions.bindMobileMenuClick();
       }
@@ -52,7 +54,7 @@ BIGGIE.functions = {
     $('#mobile-menu').click(function(){
       $('.menu').toggleClass('expanded');
       $(this).toggleClass('expanded');
-      $('.mobile-menu-home').toggleClass('expanded animated bounceInDown');
+      $('.mobile-menu-home').toggleClass('expanded');
     });
 
   },
@@ -71,13 +73,15 @@ BIGGIE.functions = {
     var slogan = $('#slogan-container h1');
 
 
-    $(".home-item").waypoint({
-      handler: function(direction) {
-        var title = $(this.element).attr("title");
-        slogan.text(title);
-      },
-      offset: -1
-    })
+    $(".home-item").each(function(index, elem){
+        var inview = new Waypoint.Inview({
+          element: $(elem)[0],
+          enter: function(direction) {
+            var title = $(elem).attr("title");
+            slogan.text(title);
+          }
+        });
+    });
   },
 
   bindPortfolioVideoClicks: function(){
