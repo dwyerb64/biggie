@@ -17,7 +17,17 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
+<!-- This style allows nev text element color to be determined by WP acf option -->
+<style type="text/css">
+	@media only screen and (min-width: 768px){
+		.special-color .menu li a {
+		    color: <?php the_field('nav_element_color', 'option'); ?>;
+		}
+	}
+</style>
+<!-- -------------------------------------------------------------------------- -->
 </head>
+
 
 <body <?php body_class(); ?>>
 <div class="container header-logo-container">
@@ -26,10 +36,12 @@
   </a>
 </div>
 
-<div class="container">
-<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu', 'container_class' => 'hidden-xs' ) ); ?>	
+<div class="container special-color">
+	<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu', 'container_class' => 'hidden-xs' ) ); ?>	
 </div>
-<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu') ); ?>
+<div class="special-color"
+	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu') ); ?>
+</div>
 <button type="button" id="mobile-menu" class="visible-xs collapsed navbar-toggle" > 
   <span class="icon-bar"></span> 
   <span class="icon-bar"></span>

@@ -1,0 +1,40 @@
+[
+    {
+        "key": "group_584be77d6a049",
+        "title": "Navigation Elements Color",
+        "fields": [
+            {
+                "key": "field_584be7ee3fb48",
+                "label": "Color of navigation elements",
+                "name": "nav_element_color",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#404041"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-header"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]
