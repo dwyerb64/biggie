@@ -29,14 +29,14 @@
 		    color: <?php the_field('social_nav_element_color', 'option'); ?>;
 		}
 	}
-</style
+</style>
 </head>
 
 <body <?php body_class(); ?>>
 <div class="container header-logo-container">
   <a href="<?php echo get_home_url() ?>" class="header-logo">
-    <img src="<?php echo get_header_image(); ?>">
-  </a>
+<?php include 'template-parts\svg-logo.php' ?>
+</a>
 </div>
 
 <div class="container social-header-color">

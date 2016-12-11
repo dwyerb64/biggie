@@ -9,11 +9,30 @@
   left: 18px;
   top: 18px;
   max-width: 200px;
+  width: 65px;
+
+  .main-letter{
+    fill: $colorPrimaryLogo;
+  }
+  .letter-o{
+    fill: $colorSecondaryLogo1;
+  }
+}
+
+.page-template-page_contact-us,
+.page-template-page_about-us {
+  .main-letter{
+    fill: $colorPrimaryLogo;
+  }
+  .letter-o{
+    fill: $colorSecondaryLogo2;
+  }
 }
 
 
 @media (min-width: 768px) {
     .header-logo{
       top: 30px;
+      width: 100px;
     }
 }
