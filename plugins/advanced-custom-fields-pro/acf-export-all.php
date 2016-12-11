@@ -340,6 +340,86 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+  'key' => 'group_584be77d6a049',
+  'title' => 'Primary navigation color',
+  'fields' => array (
+    array (
+      'key' => 'field_584be7ee3fb48',
+      'label' => 'Color of primary navigation elements',
+      'name' => 'primary_nav_element_color',
+      'type' => 'color_picker',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '#404041',
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'options_page',
+        'operator' => '==',
+        'value' => 'acf-options-header',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+  'local' => 'php',
+));
+
+acf_add_local_field_group(array (
+  'key' => 'group_584c0eb08d43c',
+  'title' => 'Social navigation color',
+  'fields' => array (
+    array (
+      'key' => 'field_584c0eb0a3551',
+      'label' => 'Color of social navigation elements',
+      'name' => 'social_nav_element_color',
+      'type' => 'color_picker',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '#404041',
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'options_page',
+        'operator' => '==',
+        'value' => 'acf-options-header',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+  'local' => 'php',
+));
+
+acf_add_local_field_group(array (
   'key' => 'group_5834c3c1cd447',
   'title' => 'Work Article',
   'fields' => array (
@@ -361,6 +441,48 @@ acf_add_local_field_group(array (
       'prepend' => '',
       'append' => '',
       'maxlength' => '',
+    ),
+    array (
+      'key' => 'field_584c387198581',
+      'label' => 'Enable Custom Title',
+      'name' => 'enable_custom_title',
+      'type' => 'true_false',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => 'If you wish to have a WYSIWYG for the title select true',
+      'default_value' => 0,
+    ),
+    array (
+      'key' => 'field_584c389198582',
+      'label' => 'Custom Title',
+      'name' => 'custom_title',
+      'type' => 'wysiwyg',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => array (
+        array (
+          array (
+            'field' => 'field_584c387198581',
+            'operator' => '==',
+            'value' => '1',
+          ),
+        ),
+      ),
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'tabs' => 'all',
+      'toolbar' => 'full',
+      'media_upload' => 1,
     ),
     array (
       'key' => 'field_5834c557e6d24',
@@ -516,8 +638,7 @@ acf_add_local_field_group(array (
               'label' => 'Play Button Colour',
               'name' => 'play_button_colour',
               'type' => 'color_picker',
-              'instructions' => '#2fbeb6 - green/cyan
-#404040 - dark gray',
+              'instructions' => '',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -531,6 +652,40 @@ acf_add_local_field_group(array (
               'key' => 'field_5838947aee996',
               'label' => 'Video Placeholder',
               'name' => 'video_placeholder',
+              'type' => 'image',
+              'instructions' => '',
+              'required' => 0,
+              'conditional_logic' => 0,
+              'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+              ),
+              'return_format' => 'array',
+              'preview_size' => 'thumbnail',
+              'library' => 'all',
+              'min_width' => '',
+              'min_height' => '',
+              'min_size' => '',
+              'max_width' => '',
+              'max_height' => '',
+              'max_size' => '',
+              'mime_types' => '',
+            ),
+          ),
+          'min' => '',
+          'max' => '',
+        ),
+        array (
+          'key' => '584c1a80d9574',
+          'name' => 'background_image',
+          'label' => 'Background Image',
+          'display' => 'row',
+          'sub_fields' => array (
+            array (
+              'key' => 'field_584c1aacd9575',
+              'label' => 'image',
+              'name' => 'image',
               'type' => 'image',
               'instructions' => '',
               'required' => 0,
