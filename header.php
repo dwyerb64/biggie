@@ -35,7 +35,7 @@
 <body <?php body_class(); ?>>
 <div class="container header-logo-container">
   <a href="<?php echo get_home_url() ?>" class="header-logo">
-<?php include 'template-parts\svg-logo.php' ?>
+<?php include 'template-parts/svg-logo.php' ?>
 </a>
 </div>
 

@@ -24,7 +24,7 @@ include('template-parts/home-featured-image.php');
 <div class="container" id="slogan-container">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 no-left-padding">
-			<h1 class="slogan-title no-left-padding"><?php echo $tagline; ?></h1>
+			<a href="/"><h1 class="slogan-title no-left-padding"><?php echo $tagline; ?></h1></a>
 		</div>
 	</div>
 	
@@ -78,7 +78,7 @@ include('template-parts/home-featured-image.php');
 			else:
 				?>
 
-			<div class="col-xs-12 home-item right" title="<?php the_title( ) ?>">
+			<div class="col-xs-12 home-item right" title="<?php the_title( ) ?>" data-url="<?php echo get_permalink() ?> ">
 				<div class="row">
 					
 					</div>

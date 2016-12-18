@@ -28,7 +28,6 @@ BIGGIE.events = {
 
     homeInit: function(){
       BIGGIE.functions.homeWaypointsInit();
-
     },
 
     portfolioInit: function(){
@@ -65,7 +64,7 @@ BIGGIE.functions = {
         $(this.element).toggleClass("work-item-enter");
       },
       offset: "80%"
-    })
+    });
   },
 
   homeWaypointsInit: function(){
@@ -78,7 +77,12 @@ BIGGIE.functions = {
           element: $(elem)[0],
           enter: function(direction) {
             var title = $(elem).attr("title");
+            var portfolioUrl = $(elem).attr("data-url");
             slogan.text(title);
+            slogan.parent().attr("href", portfolioUrl);
+            // slogan.on( "click", { value: portfolioUrl }, function( event ) {
+            //   window.open(event.data.value);
+            // });
           }
         });
     });
@@ -104,7 +108,7 @@ BIGGIE.functions = {
 
 BIGGIE.objects = {
 
-}
+};
 
 
   //               //

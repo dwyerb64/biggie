@@ -8,11 +8,23 @@
   .slogan-title {
     margin-bottom: 20px;
   }
+
+  a {
+    color: $colorSecondary1;
+    text-decoration: none;
+    @include transition(color 0.5s);
+
+    &:hover {
+      text-decoration: none;
+      color: lighten($colorSecondary1, 10%);
+    }
+  }
   
   h1{
     font-weight: 700;
     font-size: 50px;
     line-height: 0.9;
+    font-family: "Gotham SSm A", "Gotham SSm B";
     @media (max-width: 767px) { 
       margin-top: 40px;
     }
@@ -20,20 +32,22 @@
 }
 
 
-
 @media (min-width: 480px){
 
-#slogan-container {
-  z-index: 1000;
+  #slogan-container {
+    z-index: 1000;
+    @include alignFixedElemWithGrid(left);
+    margin-top: -160px;
+    top: 50%;
 
-
-  @include alignFixedElemWithGrid(left);
-
-  top: 20%;
-  h1 {
-    font-size: 90.63px * 1.434;;
-    line-height: 98px * 1.434;
-    font-weight: bold;
+    h1 {
+      font-size: 90.63px * 1.434;
+      line-height: 98px * 1.434;
+      font-weight: bold;
+      @include transition(font-size 0.5s);
+      &:hover {
+        font-size: 90.63px * 1.44;
+      }
+    }
   }
-}
 }
