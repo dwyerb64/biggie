@@ -15,14 +15,21 @@
 	<section id="footer-container">
 		<footer id="colophon" class="container site-footer" role="contentinfo">
 			<div class="row site-info">
-
 				<div class="col-xs-6 footer-content">
-					<p class="contact-name"><?php the_field('company_name', 'option'); ?></p>
-					<p class="contact-address"><?php the_field('address_line_1', 'option'); ?></p>
-					<p class="contact-address"><?php the_field('address_line_2', 'option'); ?></p>
-					<p class="contact-address"><?php the_field('country', 'option'); ?></p>
-					<p class="contact-info"><strong>tel. </strong><?php the_field('telephone_number', 'option'); ?></p>
-					<p class="contact-info"><strong>email: </strong><?php the_field('email_address', 'option'); ?></p>
+					<div class="company-name">
+						<p class="contact-name"><?php the_field('company_name', 'option'); ?></p>
+					</div>
+					<div class="contact-address1">
+						<p><?php the_field('address_line_1', 'option'); ?></p>
+					</div>
+					<div class="contact-address2">
+						<p><?php the_field('address_line_2', 'option'); ?> - <?php the_field('country', 'option'); ?></p>
+					</div>
+					<!-- <p class="contact-address"><?php the_field('country', 'option'); ?></p> -->
+					<div class="contact-info">
+						<p><strong>tel. </strong><?php the_field('telephone_number', 'option'); ?></p>
+						<p><strong>email: </strong><?php the_field('email_address', 'option'); ?></p>
+					</div>
 				</div><!-- .footer-content -->
 
 				<div class="col-xs-6 social-icons-container">

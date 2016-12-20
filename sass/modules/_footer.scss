@@ -61,16 +61,11 @@
 
 @media (min-width: 768px) {
 
-	.social-icons-container{
-		position: relative;
-		height: 193px;
-	}
+
 	
 	.social-icons{
-		position: absolute;
-    	bottom: 12px;
-    	right: 0;
-    	font-size: 12px;
+		text-align: right;
+    	font-size: 10px;
 
     	li{
     		margin: 0px 5px;
@@ -78,9 +73,34 @@
 	}
 
 	#footer-container{
-		p {
-			font-size: 20px;
+
+		.site-footer{
+			margin-top: 68px;
+			margin-bottom: 10px;
 		}
+
+		p {
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: 0.2px;
+		}
+		.contact-address1, .contact-address2{
+			position: relative;
+			left: 79px;
+			bottom: 20px;
+		}
+		
+		.contact-info{
+			position: relative;
+			left: 320px;
+			bottom: 60px;
+		}
+
+		.social-icons-container{
+		position: relative;
+		padding-top: 15px;
+	}
+
 	} 
 
 }
