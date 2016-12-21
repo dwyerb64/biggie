@@ -1,0 +1,28 @@
+.page-template-page_contact-us{
+	background-color: $colorPrimary1;
+	color: $colorSecondary2;
+
+	#contact-us {		
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 30px;
+
+		.title-block h1{
+			color: $colorWhitish;
+			margin-top: 80px;
+    		margin-bottom: 30px;
+    		font-size: 60px;
+    		font-weight: 700;
+    		line-height: 0.92;
+		}
+	
+		.content-block p{
+			font-size: 16px;
+    		line-height: 0.9;
+    		font-weight: 700;
+		}
+	}
+
+}
+
+
