@@ -2,6 +2,10 @@
 	background-color: $colorPrimary1;
 	color: $colorSecondary2;
 
+	.contact-name{
+		color: $colorWhitish;
+	}
+
 	#contact-us {		
 		padding-left: 20px;
 		padding-right: 20px;
@@ -17,10 +21,40 @@
 		}
 	
 		.content-block p{
-			font-size: 16px;
+			font-size: 14px;
     		line-height: 0.9;
     		font-weight: 700;
 		}
+
+
+		@media (min-width: 768px) {
+
+			.title-block h1{
+			color: $colorWhitish;
+			margin-top: 299px;
+    		margin-bottom: 305px;
+    		padding-left: 55px;
+    		font-size: 100px;
+    		font-weight: 700;
+    		line-height: 0.92;
+			}
+
+			.content-block{
+			position: relative;
+			width: 330px;
+			height: 481px;
+			margin-left: 30px;
+				p{
+				font-size: 18px;
+				}
+
+			.wrapper{
+				position: absolute;
+				bottom: 0;
+			}
+		}
+		}
+
 	}
 
 }
