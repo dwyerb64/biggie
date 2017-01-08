@@ -252,10 +252,14 @@ function my_acf_settings_dir( $dir ) {
     return $dir;
     
 }
- 
+$whitelist = array(
+    '127.0.0.1',
+    '::1'
+);
 
-// 3. Hide ACF field group menu item
-// add_filter('acf/settings/show_admin', '__return_false');
+
+
+
 
 
 // 4. Include ACF
@@ -289,7 +293,13 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
-// include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf-export-all.php' );
+if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
+   
+	// 3. Hide ACF field group menu item
+	add_filter('acf/settings/show_admin', '__return_false');
+	include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf-export-all.php' );
+}
+
 
 
 
