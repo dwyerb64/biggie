@@ -7,34 +7,21 @@
     margin-bottom: $body-padding;
   }
   
-  
-  $iconSize: 62px;
-  .play-button {
-    border: solid 5px;
-    border-radius: 50%;
+  .play-button-img{
+    background-image: url("images/play-icon.png");
+    background-repeat: no-repeat;
+    width: 97px;
+    height: 97px;
     position: absolute;
-    width: $iconSize;
-    height: $iconSize;
+    left: 50%;
+    margin-left: -48px;
     top: 50%;
-    left: 50%; 
-    margin-left: -($iconSize / 2);
-    margin-top:  -($iconSize / 2);
+    margin-top: -48px;
     cursor: pointer;
-    text-align: center;
-    padding-top: 11px;
-    padding-left: 6px;
-
-
-    @include  transition(all 0.5s);
     &:hover {
       // @include  materialDesignShadow();
       @include  spin();
     }
-
-    .fa {
-      font-size: $iconSize / 2;
-    }
   }
-  
 
 }
