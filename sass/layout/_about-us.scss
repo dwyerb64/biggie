@@ -7,13 +7,15 @@
 		padding-right: 20px;
 		padding-bottom: 30px;
 	
-		.title-block p{
-			color: $colorWhitish;
-			margin-top: 80px;
-    	margin-bottom: 30px;
-    	font-size: 60px;
-    	font-weight: 700;
-    	line-height: 0.92;
+		.title-block {
+				h1, p{
+				color: $colorWhitish;
+				margin-top: 80px;
+		  	margin-bottom: 30px;
+		  	font-size: 60px;
+		  	font-weight: 700;
+		  	line-height: 0.92;
+			}
 		}
 	
 		p{
@@ -25,13 +27,14 @@
 
 		@media (min-width: 768px) {
 			padding-bottom: 45px;
-		.title-block p{
-			margin-top: 380px;
-			margin-left: 180px;
-			font-size: 100px;
-    		line-height: 0.83; 
+		.title-block {
+				h1, p{
+					margin-top: 380px;
+					margin-left: 180px;
+					font-size: 100px;
+	    		line-height: 0.83; 
+				}
 			}
-
 		.content-block{
 			position: relative;
 			width: 330px;

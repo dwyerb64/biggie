@@ -18,7 +18,7 @@ BIGGIE.events = {
         BIGGIE.functions.bindMobileMenuClick();
       }
 
-      BIGGIE.functions.footerEnter();
+      BIGGIE.functions.footerEnter("80%");
 
     },
 
@@ -30,7 +30,6 @@ BIGGIE.events = {
 
     homeInit: function(){
       BIGGIE.functions.homeWaypointsInit();
-
       BIGGIE.functions.scrollDownArrow();
 
     },
@@ -49,12 +48,12 @@ BIGGIE.events = {
 
 BIGGIE.functions = {
     
-  footerEnter: function(){
+  footerEnter: function(offset){
     $('#footer-container').waypoint({
       handler: function() {
         $htmlBody.toggleClass("footer-enter");
       },
-      offset: "80%"
+      offset: offset
     });
   },
 
@@ -150,13 +149,15 @@ var $htmlBody = $('body,html'),
   //          //
  //  Events  //
 //          //
+
+
+$(document).ready( BIGGIE.events.init );
+
 $('.home').ready( BIGGIE.events.homeInit );
 
 $('.page-template-page_work').ready( BIGGIE.events.workInit );
 
 $('.layout-portfolio').ready( BIGGIE.events.portfolioInit );
-
-$(document).ready( BIGGIE.events.init );
 
 $(document).scroll( BIGGIE.events.windowscroll );
         

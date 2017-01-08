@@ -169,7 +169,7 @@ add_action( 'admin_menu', 'remove_menus' );
  * Enqueue scripts and styles.
  */
 function bigo_scripts() {
-	wp_enqueue_style( 'bigo-style', get_stylesheet_uri(), $deps = array(), '20151217' );
+	wp_enqueue_style( 'bigo-style', get_stylesheet_uri(), $deps = array(), '2015121721' );
 
 	// wp_enqueue_style( 'bigo-google-font', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700' );
 
@@ -179,11 +179,13 @@ function bigo_scripts() {
 
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'jquery-readySelctor', get_template_directory_uri() . '/bower_components/jquery-readyselector/jquery.readyselector.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/ac71f154fc.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/bower_components/waypoints/lib/jquery.waypoints.min.js', array(), '20151215', true );
 
-		wp_enqueue_script( 'inviewwaypoints', get_template_directory_uri() . '/bower_components/waypoints/lib/shortcuts/inview.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'inviewwaypoints', get_template_directory_uri() . '/bower_components/waypoints/lib/shortcuts/inview.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'lettering', get_template_directory_uri() . '/bower_components/letteringjs/jquery.lettering.js', array(), '20151215', true );
 
@@ -193,7 +195,7 @@ function bigo_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'bigo-main', get_template_directory_uri() . '/js/main.js', array(), '20170107', true );	
+	wp_enqueue_script( 'bigo-main', get_template_directory_uri() . '/js/main.js', array(), '2017010722', true );	
 }
 add_action( 'wp_enqueue_scripts', 'bigo_scripts' );
 

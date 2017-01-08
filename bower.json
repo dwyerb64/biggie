@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "letteringjs": "Lettering.js#^0.7.0",
-    "animatewithsass": "^3.2.2"
+    "animatewithsass": "^3.2.2",
+    "jquery-readyselector": "^0.1.0"
   }
 }
