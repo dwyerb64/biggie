@@ -169,7 +169,7 @@ add_action( 'admin_menu', 'remove_menus' );
  * Enqueue scripts and styles.
  */
 function bigo_scripts() {
-	wp_enqueue_style( 'bigo-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bigo-style', get_stylesheet_uri(), $deps = array(), '20151217' );
 
 	// wp_enqueue_style( 'bigo-google-font', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700' );
 
@@ -193,7 +193,7 @@ function bigo_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'bigo-main', get_template_directory_uri() . '/js/main.js', array(), '20151217', true );	
+	wp_enqueue_script( 'bigo-main', get_template_directory_uri() . '/js/main.js', array(), '20170107', true );	
 }
 add_action( 'wp_enqueue_scripts', 'bigo_scripts' );
 

@@ -136,3 +136,13 @@
   }
 }
 
+
+.footer-enter {
+  #social-menu {
+    > li:first-child {
+      a {
+        color: white;
+      }
+    }
+  }
+}

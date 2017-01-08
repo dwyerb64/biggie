@@ -7,6 +7,9 @@
 
   .slogan-title {
     margin-bottom: 20px;
+    &.grey-last-word .word4{
+      color: #bababa;
+    }
   }
 
   a {
@@ -28,6 +31,7 @@
     @media (max-width: 767px) { 
       margin-top: 40px;
     }
+
   }
 }
 

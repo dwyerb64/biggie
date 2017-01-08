@@ -18,6 +18,8 @@ BIGGIE.events = {
         BIGGIE.functions.bindMobileMenuClick();
       }
 
+      BIGGIE.functions.footerEnter();
+
     },
 
     workInit: function(){
@@ -28,6 +30,9 @@ BIGGIE.events = {
 
     homeInit: function(){
       BIGGIE.functions.homeWaypointsInit();
+
+      BIGGIE.functions.scrollDownArrow();
+
     },
 
     portfolioInit: function(){
@@ -44,8 +49,23 @@ BIGGIE.events = {
 
 BIGGIE.functions = {
     
-  functionName: function(){
+  footerEnter: function(){
+    $('#footer-container').waypoint({
+      handler: function() {
+        $htmlBody.toggleClass("footer-enter");
+      },
+      offset: "80%"
+    });
+  },
+
+  scrollDownArrow: function(){
+      $('.scroll-down-arrow').bind('click', function(event) {
         
+        $htmlBody.stop(true).animate({
+                scrollTop: $(this).offset().top
+              }, 1000);
+        event.preventDefault();
+      });
   },
 
   bindMobileMenuClick: function(){
@@ -76,13 +96,21 @@ BIGGIE.functions = {
         var inview = new Waypoint.Inview({
           element: $(elem)[0],
           enter: function(direction) {
-            var title = $(elem).attr("title");
-            var portfolioUrl = $(elem).attr("data-url");
+            var $elem = $(elem);
+            var title = $elem.attr("title");
+            var portfolioUrl = $elem.data("url");
+
             slogan.text(title);
             slogan.parent().attr("href", portfolioUrl);
-            // slogan.on( "click", { value: portfolioUrl }, function( event ) {
-            //   window.open(event.data.value);
-            // });
+
+            if($elem.data('first')){
+              slogan.addClass('grey-last-word');
+              slogan.lettering('words');
+            } else {
+              slogan.removeClass('grey-last-word');
+            }
+
+
           }
         });
     });
