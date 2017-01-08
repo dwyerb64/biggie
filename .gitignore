@@ -93,3 +93,5 @@ bower_components/*
 *.pot
 
 languages/bigo.pot
+
+/js/customizer*
