@@ -10,12 +10,17 @@ var BIGGIE = BIGGIE || {};
 BIGGIE.events = {
 
     init: function(){
-      var mq = window.matchMedia( "(max-width: 767px)" );
+      var mobileWidth = window.matchMedia( "(max-width: 767px)" );
 
       $htmlBody.addClass('js-loaded');
 
-      if (mq.matches) {
+      if (mobileWidth.matches) {
         BIGGIE.functions.bindMobileMenuClick();
+      }
+
+      var shortScreen = window.matchMedia( "(max-height: 640px)" );
+      if ( shortScreen.matches ) {
+        BIGGIE.functions.footerEnterOnSmallScreen("70%");
       }
 
       BIGGIE.functions.footerEnter("80%");
@@ -52,6 +57,15 @@ BIGGIE.functions = {
     $('#footer-container').waypoint({
       handler: function() {
         $htmlBody.toggleClass("footer-enter");
+      },
+      offset: offset
+    });
+  },
+
+  footerEnterOnSmallScreen: function(offset){
+    $('#footer-container').waypoint({
+      handler: function() {
+        $htmlBody.toggleClass("footer-enter-small-screen");
       },
       offset: offset
     });
@@ -100,13 +114,15 @@ BIGGIE.functions = {
             var portfolioUrl = $elem.data("url");
 
             slogan.text(title);
-            slogan.parent().attr("href", portfolioUrl);
+            
 
             if($elem.data('first')){
               slogan.addClass('grey-last-word');
               slogan.lettering('words');
+              slogan.parent().attr("href", "#");
             } else {
               slogan.removeClass('grey-last-word');
+              slogan.parent().attr("href", portfolioUrl);
             }
 
 

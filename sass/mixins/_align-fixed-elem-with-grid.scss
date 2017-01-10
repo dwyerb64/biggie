@@ -1,18 +1,40 @@
-@mixin alignFixedElemWithGrid($side: left, $offset: 0px) {
+@mixin alignFixedElemWithGrid($side: left, $offset: 0px, $offsetMedia: 0px) {
 
 
-
-    @media (min-width: 768px){
+    @media (min-width: 768px + $offsetMedia) {
       position: fixed;
       #{$side}: 50%;
       margin-#{$side}: -((750px / 2) + $offset);
     }
-    @media (min-width: 992px){
+    @media (min-width: 992px + $offsetMedia) {
       margin-#{$side}: -((970px / 2) + $offset);
     }
-    @media (min-width: 1200px){
+    @media (min-width: 1200px + ($offsetMedia * 2)) {
       margin-#{$side}: -((1170px / 2) + $offset);
     }
     
 }
     
+
+@mixin alignFixedElemWithGridMenu($side: left, $offset: 0px, $offsetMedia: 0px) {
+
+
+    @media (min-width: 768px + $offsetMedia) {
+      position: fixed;
+      #{$side}: 50%;
+      margin-#{$side}: -((750px / 2) + $offset);
+    }
+    @media (min-width: 992px) {
+      margin-#{$side}: -((970px / 2) - 10px);
+    }
+    @media (min-width: 992px + $offsetMedia) {
+      margin-#{$side}: -((970px / 2) + $offset);
+    }
+    @media (min-width: 1200px) {
+      margin-#{$side}: -((1170px / 2) - 10px);
+    }
+    @media (min-width: 1200px + ($offsetMedia * 2)) {
+      margin-#{$side}: -((1170px / 2) + $offset);
+    }
+    
+}

@@ -69,8 +69,10 @@ include('template-parts/home-featured-image.php');
 					<a class="col-sm-7 home-item-image" href="<?php echo get_permalink() ?> ">
 						<?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-responsive' ) ) ?>
 						<div class="home-portfolio-title">
-							<h2><?php the_title() ?></h2>
-							<h3 class="hidden-xs"><?php the_field('client') ?></h3>
+							<div class="text-container">
+								<h2><?php the_title() ?></h2>
+								<h3 class="hidden-xs"><?php the_field('client') ?></h3>
+							</div>
 						</div>
 					</a>
 				</div>
@@ -87,8 +89,10 @@ include('template-parts/home-featured-image.php');
 					<a class="col-sm-7 col-sm-offset-5 home-item-image" href="<?php echo get_permalink() ?> ">
 						<?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-responsive' ) ) ?>
 						<div class="home-portfolio-title">
-							<h2><?php the_title() ?></h2>
-							<h3 class="hidden-xs"><?php the_field('client') ?></h3>
+							<div class="text-container">
+								<h2><?php the_title() ?></h2>
+								<h3 class="hidden-xs"><?php the_field('client') ?></h3>
+							</div>
 						</div>
 					</a>
 				</div>
