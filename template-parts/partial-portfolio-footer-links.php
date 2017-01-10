@@ -3,7 +3,7 @@
 
   <?php
 
-    $workQuery = getListOfPortfolios(3);
+    $workQuery = getListOfPortfoliosForHomepage(3);
     
     if( $workQuery->have_posts() ) {
           while ($workQuery->have_posts()) : $workQuery->the_post();

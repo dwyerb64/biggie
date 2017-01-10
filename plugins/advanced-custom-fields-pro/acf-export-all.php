@@ -424,6 +424,51 @@ acf_add_local_field_group(array (
   'title' => 'Work Article',
   'fields' => array (
     array (
+      'key' => 'field_587553870461a',
+      'label' => 'Appear On Homepage',
+      'name' => 'appear_on_homepage',
+      'type' => 'true_false',
+      'instructions' => 'Select True if you would like this post to appear on the homepage',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '50',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => '',
+      'default_value' => 1,
+    ),
+    array (
+      'key' => 'field_587553cf0461b',
+      'label' => 'Order Number',
+      'name' => 'order_number',
+      'type' => 'number',
+      'instructions' => 'The order number for appearing on the homepage.',
+      'required' => 1,
+      'conditional_logic' => array (
+        array (
+          array (
+            'field' => 'field_587553870461a',
+            'operator' => '==',
+            'value' => '1',
+          ),
+        ),
+      ),
+      'wrapper' => array (
+        'width' => '50',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'min' => '',
+      'max' => '',
+      'step' => '',
+    ),
+    array (
       'key' => 'field_5834c5ebcbaa9',
       'label' => 'Client',
       'name' => 'client',

@@ -169,7 +169,7 @@ add_action( 'admin_menu', 'remove_menus' );
  * Enqueue scripts and styles.
  */
 function bigo_scripts() {
-	wp_enqueue_style( 'bigo-style', get_stylesheet_uri(), $deps = array(), '2015121726' );
+	wp_enqueue_style( 'bigo-style', get_stylesheet_uri(), $deps = array(), '2015121727' );
 
 	// wp_enqueue_style( 'bigo-google-font', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700' );
 

@@ -45,7 +45,7 @@ include('template-parts/home-featured-image.php');
 		<?php
 
 			
-			$workQuery = getListOfPortfolios(10);
+			$workQuery = getListOfPortfoliosForHomepage(8);
 			
 			if( $workQuery->have_posts() ) {
 						$homeIndex = 0;
