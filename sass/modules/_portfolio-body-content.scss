@@ -20,6 +20,7 @@
     @media only screen and (min-width: 768px){
       font-size: 20px;      
       line-height: 28px;
+      padding-bottom: 57px;
     }
   }
   h2 {
@@ -32,7 +33,16 @@
     @media only screen and (min-width: 768px){
       font-size: 17px;
       line-height: 27px;
+      font-weight: 300;
+      padding-bottom: 57px;
     }
+  h3,h4{
+    color: $colorPrimary1;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 1.36;
+    letter-spacing: -0.2px;
+  }
   }
   p{
     color: black;
@@ -62,7 +72,9 @@
       
       @media only screen and (min-width: 768px){
         font-size: 35px;
-        line-height: 41px;
+        line-height: 36px;
+        letter-spacing: -1px;
+        padding-bottom: 10px;
       }
       
     }
