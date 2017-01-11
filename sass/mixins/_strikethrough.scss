@@ -16,7 +16,12 @@
 			transform-origin: center left;
 			transition: transform 0.25s cubic-bezier(.55, 0, .1, 1);
 			transform: scaleX(0);
-			
+				.page-template-page_contact-us & {
+					background: black;
+				}
+				.page-template-page_about-us & {
+					background: black;
+				}
 		}
 		&:hover {
 			&:after {
