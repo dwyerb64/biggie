@@ -25,7 +25,7 @@ include('template-parts/home-featured-image.php');
 <div class="container" id="slogan-container">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 no-left-padding">
-			<a href="/"><h1 class="slogan-title no-left-padding"><?php echo $tagline; ?></h1></a>
+			<a href="/"><h1 class="slogan-title grey-last-word no-left-padding"><?php echo $tagline; ?></h1></a>
 		</div>
 	</div>
 	

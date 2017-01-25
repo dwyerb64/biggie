@@ -38,6 +38,7 @@
       margin: 5px;
       padding-right: 10px;
       margin-top: -25px; //This needs addressing
+      width: 100%;
   }
 
 }
@@ -63,80 +64,82 @@
 
 
 @media (min-width: 768px){
-.home-item {
-  position: relative;
-  margin-bottom: 280px;
-
-  &:first-child {
-    height: 95vh;
-    margin-bottom: 20px;
-  }
-
-  
-  a {
-    float: left;
-  }
-  .company-description {
-    position: absolute;
-    left: 0px;
-    bottom: 80px;
-    padding: 15px;
-    font-size: 20px;
-    width: 100%;
-    line-height: 26px;
-
-  }
-
-  .home-item-image {
+  .home-item {
     position: relative;
-  }
+    margin-bottom: 280px;
 
-  .home-portfolio-title {
-    height: 53px;
-    width: 300px;
-    position: absolute;
-    // bottom: 175px;
-    bottom: 0px;
-    right: 0;
-    margin-right: -300px;
+    &:first-child {
+      height: 95vh;
+      margin-bottom: 20px;
+    }
 
-    .text-container {
+    
+    a {
+      float: left;
+    }
+    .company-description {
       position: absolute;
-      bottom: 0px;
+      left: 0px;
+      bottom: 80px;
+      padding: 15px;
+      font-size: 20px;
+      width: 100%;
+      line-height: 26px;
+
     }
-  }
-  
-  h2, h3 {
-    color: black;
-    font-size: 14.3px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: 0.1px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
 
-  h3 {
-    font-weight: normal;
-    bottom: 0;
-  }  
+    .home-item-image {
+      position: relative;
+    }
 
-  h2 {
-    color: $colorPrimary1;
-    font-weight: bold;
-  }
-
-  &.right {
     .home-portfolio-title {
-      text-align: right;
-      margin-left: -300px;
-      left:0;
+      height: 53px;
+      width: 300px;
+      position: absolute;
+      // bottom: 175px;
+      bottom: 0px;
+      right: 0;
+      margin-right: -300px;
+
+      .text-container {
+        position: absolute;
+        bottom: 0px;
+      }
+    }
+    
+    h2, h3 {
+      color: black;
+      font-size: 14.3px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: 0.1px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    h3 {
+      font-weight: normal;
+      bottom: 0;
+    }  
+
+    h2 {
+      color: $colorPrimary1;
+      font-weight: bold;
+    }
+
+    &.right {
+      .home-portfolio-title {
+        text-align: right;
+        margin-left: -300px;
+        left:0;
+        padding-right: 5px;
+        .text-container {
+          right: 0;
+        }
+      }
     }
   }
-
-}
-
 }
 

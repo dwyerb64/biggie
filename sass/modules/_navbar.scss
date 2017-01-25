@@ -1,4 +1,6 @@
 .menu {
+  z-index: 2000;
+  
   @media (max-width: 849px) { 
   
     height: 0px;
@@ -8,7 +10,6 @@
     width: 100%;
     overflow: hidden;
 
-    z-index: 1000;
     padding-left: 0px;
     list-style-type: none;
     > li {
@@ -37,7 +38,6 @@
 
   @media only screen and (min-width: 850px){
     
-  	z-index: 1000;
   	position: fixed;
     transform: rotate(-90deg);
     transform-origin: top right; 

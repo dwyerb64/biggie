@@ -108,24 +108,12 @@ BIGGIE.functions = {
     $(".home-item").each(function(index, elem){
         var inview = new Waypoint.Inview({
           element: $(elem)[0],
-          enter: function(direction) {
-            var $elem = $(elem);
-            var title = $elem.attr("title");
-            var portfolioUrl = $elem.data("url");
-
-            slogan.text(title);
-            
-
-            if($elem.data('first')){
-              slogan.addClass('grey-last-word');
-              slogan.lettering('words');
-              slogan.parent().attr("href", "#");
-            } else {
-              slogan.removeClass('grey-last-word');
-              slogan.parent().attr("href", portfolioUrl);
-            }
-
-
+          offset: '100%',
+          enter: function(){
+            slogan.lettering('words');          
+          },
+          entered: function(direction) {
+            BIGGIE.functions.homepageItemEnter(elem, slogan);
           }
         });
     });
@@ -145,6 +133,24 @@ BIGGIE.functions = {
 
   initLetteringForHoverAnimations: function(){
     $(".letter-by-letter-transition").lettering();
+  },
+
+  homepageItemEnter: function(elem, slogan){
+    var $elem = $(elem);
+    var title = $elem.attr("title");
+    var portfolioUrl = $elem.data("url");
+
+    slogan.text(title);
+    
+
+    if($elem.data('first')){
+      slogan.addClass('grey-last-word');
+      slogan.lettering('words');
+      slogan.parent().attr("href", "#");
+    } else {
+      slogan.removeClass('grey-last-word');
+      slogan.parent().attr("href", portfolioUrl);
+    }
   }
 };
 
