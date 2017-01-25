@@ -1,5 +1,5 @@
 .work-item {
-    padding: 30px;
+    padding: 20px 30px;
     -webkit-transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
     -moz-transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
     -o-transition: all 1s cubic-bezier(0.4, 0.01, 0.18, 1);
@@ -22,6 +22,8 @@
       h3 {
         font-weight: 300;
         bottom: 0;
+        font-size: 13px;
+        line-height: 1;
       }  
         
         .img-container, img {
