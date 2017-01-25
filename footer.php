@@ -25,10 +25,9 @@
 					<div class="contact-address2">
 						<p><?php the_field('address_line_2', 'option'); ?> - <?php the_field('country', 'option'); ?></p>
 					</div>
-					<!-- <p class="contact-address"><?php the_field('country', 'option'); ?></p> -->
 					<div class="contact-info">
 						<p><strong>tel. </strong><?php the_field('telephone_number', 'option'); ?></p>
-						<p><strong>email: </strong><?php the_field('email_address', 'option'); ?></p>
+						<p><a href="mailto:<?php the_field('email_address', 'option');?>"><strong>email: </strong><?php the_field('email_address', 'option'); ?></a></p>
 					</div>
 				</div><!-- .footer-content -->
 
