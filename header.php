@@ -30,6 +30,20 @@
 		}
 	}
 </style>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta name="google-site-verification" content="2V7Ad6NVEZpDcYHsRVv1z0y15taCqd8aISyNy1kXxk4">
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46092084-3', 'auto');
+ga('send', 'pageview');
+
+</script>
 </head>
 
 <body <?php body_class(); ?>>
