@@ -4,12 +4,13 @@
     margin-left:18px;
     margin-top: 49px;
     text-transform: lowercase;
+    @include alignFixedElemWithGrid(left);
 
   .slogan-title {
     margin-bottom: 20px;
     &.grey-last-word {
       cursor: default;
-     .word4{
+     .word2{
         color: #bababa;
       }
     }
@@ -33,12 +34,11 @@
       }
       .grey-last-word {
         color: $colorSecondary1;
-        .word4{
+        .word2{
           color: #bababa;
         }
       }
     }
-
 
   }
   
@@ -59,9 +59,8 @@
 
   #slogan-container {
     z-index: 1000;
-    @include alignFixedElemWithGrid(left);
     margin-top: -160px;
-    top: 50%;
+    top: 40%;
 
     h1 {
       font-size: 90.63px * 1.434;

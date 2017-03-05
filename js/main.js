@@ -105,17 +105,17 @@ BIGGIE.functions = {
     var slogan = $('#slogan-container h1');
 
 
-    $(".home-item").each(function(index, elem){
-        var inview = new Waypoint.Inview({
-          element: $(elem)[0],
-          offset: '100%',
-          enter: function(){
-            slogan.lettering('words');          
-          },
-          entered: function(direction) {
-            BIGGIE.functions.homepageItemEnter(elem, slogan);
-          }
-        });
+    $(".home-item").waypoint({
+      handler: function(direction) {
+        if(direction == "down"){
+          BIGGIE.functions.homepageItemEnter(this.element, slogan);  
+        }else{
+          var key = this.key.split("-")[1]; 
+          BIGGIE.functions.homepageItemEnter(this.group.waypoints[key-1].element, slogan);
+        }
+         
+      },
+      offset: "65%"
     });
   },
 

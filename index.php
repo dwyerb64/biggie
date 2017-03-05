@@ -33,7 +33,7 @@ include('template-parts/home-featured-image.php');
 
 <main class="container">
 	<div class="row">
-		<div class="col-xs-12 col-md-5 col-md-offset-1 home-item no-left-padding" title="<?php echo $tagline; ?>" data-first="true">
+		<div class="col-xs-12 col-md-6 col-lg-5 col-md-offset-1 home-item no-left-padding" title="<?php echo $tagline; ?>" data-first="true">
 			<div class="company-description">
 				<p>
 					<?php echo get_theme_mod( 'company_description' ); ?>
