@@ -36,6 +36,7 @@ BIGGIE.events = {
     homeInit: function(){
       BIGGIE.functions.homeWaypointsInit();
       BIGGIE.functions.scrollDownArrow();
+      BIGGIE.functions.fadeOutTextOnScroll('#js_company_description p');
 
     },
 
@@ -116,6 +117,17 @@ BIGGIE.functions = {
          
       },
       offset: "65%"
+    });
+  },
+
+  fadeOutTextOnScroll: function(elemId){
+    var $elem = $(elemId);
+    $(window).on('scroll', function() {
+      var st = $(this).scrollTop();
+
+      $elem.css({
+          'opacity' : 1 - st/350
+      });
     });
   },
 
