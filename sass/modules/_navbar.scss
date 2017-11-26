@@ -38,41 +38,41 @@
 
   @media only screen and (min-width: 850px){
     
-  	position: fixed;
+    position: fixed;
     transform: rotate(-90deg);
     transform-origin: top right; 
     width: 100%;
     width: 100vh;
-  	list-style-type: none;
+    list-style-type: none;
     top: 0px;
 
 
-  	> li {
-  		display: inline-block;
-  		margin-right: 35px;
-  		margin-left: 90px;
-  		position: relative;
-  		cursor: pointer;
-  		float: right;
+    > li {
+      display: inline-block;
+      margin-right: 35px;
+      margin-left: 90px;
+      position: relative;
+      cursor: pointer;
+      float: right;
 
       font-size: 15px;
       font-weight: 700;
 
 
-  		@include strikethrough-onhover();
-  	}
+      @include strikethrough-onhover();
+    }
 
-  	&#social-menu {
-  		transform-origin: top left; 
-  		bottom: 20px;
+    &#social-menu {
+      transform-origin: top left; 
+      bottom: 20px;
       top: 90vh;
-  		> li {
-  		  float: left;
+      > li {
+        float: left;
         margin-right: 90px;
         margin-left: 25px;
-  		}
+      }
 
-  	}
+    }
   }
 }
 

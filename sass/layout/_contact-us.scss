@@ -1,67 +1,67 @@
 .page-template-page_contact-us{
-	background-color: $colorPrimary1;
-	color: $colorSecondary2;
+  background-color: $colorPrimary1;
+  color: $colorSecondary2;
 
-	.contact-name{
-		color: $colorWhitish;
-	}
+  .contact-name{
+    color: $colorWhitish;
+  }
 
-	#contact-us {		
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-bottom: 30px;
+  #contact-us {   
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
     min-height: 90vh;
 
-		.title-block h1{
-			color: $colorWhitish;
-			margin-top: 80px;
-    		margin-bottom: 30px;
-    		font-size: 60px;
-    		font-weight: 700;
-    		line-height: 0.92;
-		}
-	
-		.content-block p{
-			font-size: 14px;
-    		line-height: 0.9;
-    		font-weight: 700;
-		}
+    .title-block h1{
+      color: $colorWhitish;
+      margin-top: 80px;
+        margin-bottom: 30px;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 0.92;
+    }
+  
+    .content-block p{
+      font-size: 14px;
+        line-height: 0.9;
+        font-weight: 700;
+    }
 
-		a {
-			color: $colorWhitish;
-			text-decoration: none;
-		}
+    a {
+      color: $colorWhitish;
+      text-decoration: none;
+    }
 
 
-		@media (min-width: 768px) {
+    @media (min-width: 768px) {
 
-			.title-block h1{
-			color: $colorWhitish;
-			margin-top: 299px;
-    		margin-bottom: 74px;
-    		padding-left: 55px;
-    		font-size: 100px;
-    		font-weight: 700;
-    		line-height: 0.92;
-			}
+      .title-block h1{
+      color: $colorWhitish;
+      margin-top: 299px;
+        margin-bottom: 74px;
+        padding-left: 55px;
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 0.92;
+      }
 
-			.content-block{
-			position: relative;
-			width: 330px;
-			height: 481px;
-			margin-left: 30px;
-				p{
-				font-size: 18px;
-				}
+      .content-block{
+      position: relative;
+      width: 330px;
+      height: 481px;
+      margin-left: 30px;
+        p{
+        font-size: 18px;
+        }
 
-			.wrapper{
-				position: absolute;
-				bottom: 0;
-			}
-		}
-		}
+      .wrapper{
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    }
 
-	}
+  }
 
 }
 

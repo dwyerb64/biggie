@@ -34,7 +34,10 @@ BIGGIE.events = {
     },
 
     homeInit: function(){
-      BIGGIE.functions.homeWaypointsInit();
+      if(BIGGIE.functions.isLargeScreen()){
+        BIGGIE.functions.homeWaypointsInit();  
+      }
+      
       BIGGIE.functions.scrollDownArrow();
       BIGGIE.functions.fadeOutTextOnScroll('#js_company_description p');
 
@@ -53,6 +56,12 @@ BIGGIE.events = {
 };
 
 BIGGIE.functions = {
+
+  isLargeScreen: function(){
+    var mq = window.matchMedia( "(min-width: 768px)" );
+
+    return mq.matches;
+  },
     
   footerEnter: function(offset){
     $('#footer-container').waypoint({
@@ -137,7 +146,7 @@ BIGGIE.functions = {
       parent.find(".portfolio-placeholder").fadeOut();
       $( this ).fadeOut();
 
-      parent.find("iframe")[0].src += "&autoplay=1";
+      parent.find("iframe")[0].src += "?autoplay=1";
       // ev.preventDefault();
     });
 
