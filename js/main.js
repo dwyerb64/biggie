@@ -36,10 +36,10 @@ BIGGIE.events = {
     homeInit: function(){
       if(BIGGIE.functions.isLargeScreen()){
         BIGGIE.functions.homeWaypointsInit();  
+        BIGGIE.functions.fadeOutTextOnScroll('#js_company_description p');
       }
       
       BIGGIE.functions.scrollDownArrow();
-      BIGGIE.functions.fadeOutTextOnScroll('#js_company_description p');
 
     },
 
